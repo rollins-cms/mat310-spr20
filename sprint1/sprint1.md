@@ -41,7 +41,6 @@ The "Requirements" grade is the problem set.  The scrum artifacts will be graded
    * Understand the concepts on the Responsibilities list.
    * Read about Scrum.  Link to pdf is on Canvas.
    * Get an account on Trello.com.  Google "Scrum for Trello" and "Burndown for Trello" and install both these extensions.
-   * Complete the [syllabus quiz](./syllabus_quiz.md).  You can work on this as a team, but each member must turn in a signed, individual copy.
 
 ## Team Requirements:
    * Set up a shared board on Trello with your tasks for Sprint 1.  Add me to your board, too (user id: vsummet)
@@ -62,15 +61,15 @@ I may add to these as we go through the sprint.  Use the [Expert Request](https:
    * Set Review Videos (~30 min): LinkedIn Learning - Start with [Objects as Sets](https://www.linkedin.com/learning/programming-foundations-discrete-mathematics/objects-as-sets) and watch all of Lesson 2 except Sequences and Sums and Recursion
 
 # Reality Check:
-  * On Tuesday, do basic team setup and introductions.  Do sprint planning meeting.  Work on syllabus worksheet.
+  * On Wednesday, do basic team setup and introductions.
   * TODO by next class:  Get Trello accounts and do Scrum reading. Skim worksheet and problem set, noting problems you have no idea where to start or are confused by.
-  * Thursday class: Make sure everyone's on Trello.  Discuss the definitions of Scrum if there are any questions. Enter deliverables on Trello, categorize them into In-Progress and Backlog, and assign topics based on topics you had issues with.
-  * TODO by next class: Read and work through textbook readings.  Do worksheet(s), focusing on areas you're having trouble with.  Complete the syllabus quiz.
-  * Tuesday: Check worksheet and syllabus quiz & make sure everyone understands. Start problem sets together. Check/Ask professor for help if you're stuck.  Play game together.
-  * TODO by Thursday: Have "rough draft" answers for all problems in problem set.  Some may still need group discussion or further clarification.
-  * Thursday: Do final check of problem set.  Make sure problem set is neat, tidy, and meets guidelines.  Turn in your problem set at the end of class.
-  * TODO before next class: Play review game if you haven't alreay. Take the practice quiz and check your answers.  Study as a group.  
-  * Next Tuesday: Quiz (30 minutes), Sprint 1 retrospective, and Sprint 2 planning.
+  * Monday class: Make sure everyone's on Trello.  Do sprint planning meeting.  Discuss the definitions of Scrum if there are any questions. Enter deliverables on Trello, categorize them into In-Progress and Backlog, and assign topics based on topics you had issues with.
+  * TODO by next class: Read and work through textbook readings.  Do worksheet(s), focusing on areas you're having trouble with.  
+  * Wedneday: Check worksheet and  make sure everyone understands. Start problem sets together. Check/Ask professor for help if you're stuck.  Play game together.
+  * TODO by next class: Have "rough draft" answers for all problems in problem set.  Some may still need group discussion or further clarification.
+  * Monday: Do final check of problem set.  Make sure problem set is neat, tidy, and meets guidelines.  Turn in your problem set at the end of class.
+  * TODO before next class: Take the practice quiz and check your answers.  Study as a group.  
+  * Wednesday: Quiz (30 minutes), Sprint 1 retrospective, and Sprint 2 planning.
 
 # Retrospective:
   * Complete this [sprint retrospective survey](https://rollins.co1.qualtrics.com/jfe/form/SV_3rAIzhpHFYbIixf?course=mat310s20&sprint=1).  Each team member should complete a survey.
