@@ -79,6 +79,9 @@ If you or your team disagree with a grade you've received on an assignment, you 
 * Sprint 6: Turing Machines, Computability, Limits of Computation
 * Sprint 7: Recursion, Recursive Definitions
 
+## Final Exam
+This course **will** have a final exam.  It will be **April 30, 8-10am**.  This time and date is set by the College and is not changeable.  Do not make plans to leave campus before the final exam.  Should you miss the exam, you will be required to submit documentation of the emergency circumstances which required you to miss the exam.
+
 ## What I Expect of You:
 * Devote a minimum of 8 hours a week outside of class time
 * Tell me when you're struggling and give me the chance to help you.
