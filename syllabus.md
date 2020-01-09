@@ -7,8 +7,8 @@
 * Class time: MW 1-2:15pm
 * Class location: Bush 208
 * Textbooks: We will use a combination of two required textbooks:
-     * the open source textbook [Foundations of Computation](http://math.hws.edu/FoundationsOfComputation/FoundationsOfComputation_2.3.2_8.5x11.pdf) (PDF). If you would like a printed copy of this textbook, you can get it printed and spiral bound at [Rollins Print Services](https://www.rollins.edu/print-services/) for about $15.  
-     * An Introduction to the Theory of Computation, by Michael Sipser.  Either the 2nd or 3rd edition is fine as are rentals or e-books.  Available from the campus bookstore and other retailers.
+     * the open source textbook [Foundations of Computation](http://math.hws.edu/FoundationsOfComputation/FoundationsOfComputation_2.3.2_8.5x11.pdf) (PDF). If you would like a printed copy of this textbook, you can get it printed and spiral bound at [Rollins Print Services](https://www.rollins.edu/print-services/) for about $15.  On sprints, this book is denoted as "FoC".  
+     * An Introduction to the Theory of Computation, by Michael Sipser.  Either the 2nd or 3rd edition is fine as are rentals or e-books.  Available from the campus bookstore and other retailers.  On sprints, this book is denoted as "ITC".
 * Software: We will be using DrRacket and Java in this class.  This software is free, and instructions will be given on installing and using it during class.  
 
 
