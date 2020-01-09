@@ -72,11 +72,11 @@ If you or your team disagree with a grade you've received on an assignment, you 
 
 ## Sprints (tentative and subject to change):
 * Sprint 1: Propositional Logic and Set Theory review
-* Sprint 2: Data Representation and Circuits, Boolean Algebra
-* Sprint 3: Regular Expressions, FSA, NDFSA, Reg. Languages, Non-regular languages
+* Sprint 2: Regular Expressions, FSA, Reg. Languages
+* Sprint 3: NDFSA, non-regular languages, pumping lemma
 * Sprint 4: Grammars: CFGs, Parsing and Parsers, Compilers
-* Sprint 5: Pushdown Automata, Non-CFGs, General Grammars
 * Sprint 6: Turing Machines, Computability, Limits of Computation
+* Sprint 2: Data Representation and Circuits, Boolean Algebra
 * Sprint 7: Recursion, Recursive Definitions
 
 ## Final Exam
