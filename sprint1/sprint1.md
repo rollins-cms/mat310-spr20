@@ -16,7 +16,7 @@ I am having you read from a non-technical book about the value of Scrum, the met
    * Define "Backlog", "Burndown charts", "Planning Poker", "Retrospective"
    * Why do we use Scrum?  How is it related to Agile?  What are the core values of each?
    * Be able to use the Trello software.  
-2. Review Logic Basics (Textbook: 1.1, 1.2, 1.5)
+2. Review Logic Basics (FoC: 1.1, 1.2, 1.5)
    * Variables and propositions
    * Conjunction, disjunction, negation, conditional, biconditional, exclusive or - logic, operators, and notation
    * How to draw and complete truth tables
@@ -24,12 +24,12 @@ I am having you read from a non-technical book about the value of Scrum, the met
    * Be able to form the contrapositive, converse, and inverse of propositions
    * Predicate logic
    * Quantifiers (universal and existential)
-3. Review Set Basics (Textbook: 2.1, 2.2, 2.4)
+3. Review Set Basics (FoC: 2.1, 2.2, 2.4)
    * Basic vocabulary: elements, empty set, proper subset
    * Union, intersection, difference, disjoint of sets
    * Set notation (see table 2.1)
    * Boolean algebra of sets 
-4. Basic data represetation (Textbook: 3.3)
+4. Basic data represetation (FoC: 3.3)
    * Convert decimal to binary representation
    * Convert binary to hexadecimal
    * Be able to apply bitwise logical operators
@@ -62,10 +62,8 @@ I may add to these as we go through the sprint.  Use the [Expert Request](https:
 
 # Reality Check:
   * On Wednesday, do basic team setup and introductions.
-  * TODO by next class:  Get Trello accounts and do Scrum reading. Skim worksheet and problem set, noting problems you have no idea where to start or are confused by.
-  * Monday class: Make sure everyone's on Trello.  Do sprint planning meeting.  Discuss the definitions of Scrum if there are any questions. Enter deliverables on Trello, categorize them into In-Progress and Backlog, and assign topics based on topics you had issues with.
-  * TODO by next class: Read and work through textbook readings.  Do worksheet(s), focusing on areas you're having trouble with.  
-  * Wedneday: Check worksheet and  make sure everyone understands. Start problem sets together. Check/Ask professor for help if you're stuck.  Play game together.
+  * TODO by next class (note that this encompasses a week of work because of the MLK holiday):  Setup team communication.  Get Trello accounts and do Scrum reading. Skim problem set, noting problems you have no idea where to start or are confused by.  Read and work through textbook readings.
+  * Wednesday class: Make sure everyone's on Trello.  Do sprint planning meeting.  Discuss the definitions of Scrum if there are any questions. Enter deliverables on Trello, categorize them into In-Progress and Backlog, and assign topics based on topics you had issues with.  Start problem sets together.  File any expert requests you need.
   * TODO by next class: Have "rough draft" answers for all problems in problem set.  Some may still need group discussion or further clarification.
   * Monday: Do final check of problem set.  Make sure problem set is neat, tidy, and meets guidelines.  Turn in your problem set at the end of class.
   * TODO before next class: Take the practice quiz and check your answers.  Study as a group.  
