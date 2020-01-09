@@ -55,7 +55,6 @@ I may add to these as we go through the sprint.  Use the [Expert Request](https:
    * Worksheet on Chapter 1 and answer key
    * [Practice quiz](./sprint1_practice_quiz.pdf) and [answer key](./sprint1_practice_quiz_ans.pdf)
       * A quick-reference sheet is on the last page of the quiz.  This is the material I would provide on a quiz.  You don't have to memorize it.
-   * Game Idea 
    * Binary numbering videos (~4 minutes): LinkedIn Learning - [Binary-The Language of Computers](https://www.linkedin.com/learning/digital-media-foundations/binary-the-language-of-computers), and [How to use 1's and 0's to make bigger numbers](https://www.linkedin.com/learning/digital-media-foundations/how-1s-and-0s-make-larger-numbers)
    * [Worked examples using truth tables to prove logical equivalences](https://www.linkedin.com/learning/programming-foundations-discrete-mathematics/solution-write-truth-tables) (LinkedIn Learning, 5min) 
    * Set Review Videos (~30 min): LinkedIn Learning - Start with [Objects as Sets](https://www.linkedin.com/learning/programming-foundations-discrete-mathematics/objects-as-sets) and watch all of Lesson 2 except Sequences and Sums and Recursion
