@@ -6,4 +6,4 @@
 * [Scrumage Info](./scrumage.md)
 
 ## Sprints
-* [Sprint 1](./sprint1/sprint1.md) - Discrete Math Review & Scrum Overview
+* [Sprint 0](./sprint0/sprint0.md) - Discrete Math Review & Scrum Overview
