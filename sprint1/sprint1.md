@@ -50,11 +50,11 @@ The "Requirements" grade is the problem set.  The scrum artifacts will be graded
 
 # Resources:  
 I may add to these as we go through the sprint.  Use the [Expert Request](https://rollins.co1.qualtrics.com/jfe/form/SV_0jNfbBpN1clDJfn?course=mat310s20&sprint=1) for more resources. 
+   * FoC - 1.1-1.2, 2.1-2.3, and a little bit of 2.4 (cross product) 
    * [Tutorial Point series on Discrete Math](https://www.tutorialspoint.com/discrete_mathematics/discrete_mathematics_introduction.htm) (up through section on Propositional Logic).
    * [Overview of Scrum workflow](https://www.youtube.com/watch?time_continue=5&v=gy1c4_YixCo) (YouTube, 2min)
    * Video tutorials on Scrum & Agile.  There are tons.  Check out YouTube and linkedinlearning.com.  I also have books on the subject, if you would like.
    * [How to draw truth tables](https://docs.google.com/presentation/d/1NTgXBIC98R6yaCiDlf7gotO1NChB8LhzHTOwNvkOrgs/edit#slide=id.p) slide deck
-   * Worksheet on Chapter 1 and answer key
    * [Practice quiz](./sprint1_practice_quiz.pdf) and [answer key](./sprint1_practice_quiz_ans.pdf)
       * A quick-reference sheet is on the last page of the quiz.  This is the material I would provide on a quiz.  You don't have to memorize it.
    * Binary numbering videos (~4 minutes): LinkedIn Learning - [Binary-The Language of Computers](https://www.linkedin.com/learning/digital-media-foundations/binary-the-language-of-computers), and [How to use 1's and 0's to make bigger numbers](https://www.linkedin.com/learning/digital-media-foundations/how-1s-and-0s-make-larger-numbers)
