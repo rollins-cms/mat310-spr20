@@ -1,4 +1,4 @@
-# Sprint 1: Discrete Math Review
+# Sprint 0: Discrete Math Review
 
 # Roadmap:
 * Teams
@@ -7,7 +7,7 @@
 * Requirements due Monday, 1/27 at the end of class.
 
 # Rationale: 
-Sprint 1 will get you acclimated to the unique way the class will be run.  The first part is ironing out the Scrum process with you.  During this sprint, we will do some background work learning about Scrum (and the online tool Trello) as well as review some basics of Discrete Math (MAT140).  You will be responsible for knowing some basic math notation and definitions that will help us all be on the same page from here on out.  You will do a couple of problem sets.  All of these requirements are trying to pave the way for the rest of the course: giving us shared tools, shared knowledge base, and shared vocabulary.
+Sprint 0 will get you acclimated to the unique way the class will be run.  The first part is ironing out the Scrum process with you.  During this sprint, we will do some background work learning about Scrum (and the online tool Trello) as well as review some basics of Discrete Math (MAT140).  You will be responsible for knowing some basic math notation and definitions that will help us all be on the same page from here on out.  You will do a couple of problem sets.  All of these requirements are trying to pave the way for the rest of the course: giving us shared tools, shared knowledge base, and shared vocabulary.
 
 I am having you read from a non-technical book about the value of Scrum, the methodology we will be using in this course.  It is from Scrum: The Art of Doing Twice the Work in Half the Time, written by one of the founders of Scrum. It is about why Scrum works, and it is contains some fascinating ideas that I want to apply to classroom management.  I find this reading inspirational, and I'm hoping you will too. 
 
@@ -49,7 +49,7 @@ The "Requirements" grade is the problem set.  The scrum artifacts will be graded
    * Complete this [problem set](./sprint1_prob_set.pdf).
 
 # Resources:  
-I may add to these as we go through the sprint.  Use the [Expert Request](https://rollins.co1.qualtrics.com/jfe/form/SV_0jNfbBpN1clDJfn?course=mat310s20&sprint=1) for more resources. 
+I may add to these as we go through the sprint.  Use the [Expert Request](https://rollins.co1.qualtrics.com/jfe/form/SV_0jNfbBpN1clDJfn?course=mat310s20&sprint=0) for more resources. 
    * FoC - 1.1-1.2, 2.1-2.3, and a little bit of 2.4 (cross product) 
    * [Tutorial Point series on Discrete Math](https://www.tutorialspoint.com/discrete_mathematics/discrete_mathematics_introduction.htm) (up through section on Propositional Logic).
    * [Overview of Scrum workflow](https://www.youtube.com/watch?time_continue=5&v=gy1c4_YixCo) (YouTube, 2min)
@@ -71,4 +71,4 @@ I may add to these as we go through the sprint.  Use the [Expert Request](https:
   * Wednesday: Quiz (30 minutes), Sprint 1 retrospective, and Sprint 2 planning.
 
 # Retrospective:
-  * Complete this [sprint retrospective survey](https://rollins.co1.qualtrics.com/jfe/form/SV_3rAIzhpHFYbIixf?course=mat310s20&sprint=1).  Each team member should complete a survey.
+  * Complete this [sprint retrospective survey](https://rollins.co1.qualtrics.com/jfe/form/SV_3rAIzhpHFYbIixf?course=mat310s20&sprint=0).  Each team member should complete a survey.
