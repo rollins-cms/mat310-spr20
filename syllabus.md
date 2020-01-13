@@ -71,13 +71,13 @@ Letter grades:
 If you or your team disagree with a grade you've received on an assignment, you must let me know within one week of the assignment being returned.  
 
 ## Sprints (tentative and subject to change):
-* Sprint 1: Propositional Logic and Set Theory review
-* Sprint 2: Regular Expressions, FSA, Reg. Languages
-* Sprint 3: NDFSA, non-regular languages, pumping lemma
-* Sprint 4: Grammars: CFGs, Parsing and Parsers, Compilers
-* Sprint 6: Turing Machines, Computability, Limits of Computation
-* Sprint 2: Data Representation and Circuits, Boolean Algebra
-* Sprint 7: Recursion, Recursive Definitions
+* Sprint 0: Propositional Logic and Set Theory review
+* Sprint 1: Regular Expressions, FSA, Reg. Languages
+* Sprint 2: NDFSA, non-regular languages, pumping lemma
+* Sprint 3: Grammars: CFGs, Parsing and Parsers, Compilers
+* Sprint 4: Turing Machines, Computability, Limits of Computation
+* Sprint 5: Data Representation and Circuits, Boolean Algebra
+* Sprint 6: Recursion, Recursive Definitions
 
 ## Final Exam
 This course **will** have a final exam.  It will be **April 30, 8-10am**.  This time and date is set by the College and is not changeable.  Do not make plans to leave campus before the final exam.  Should you miss the exam, you will be required to submit documentation of the emergency circumstances which required you to miss the exam.
