@@ -3,7 +3,7 @@
 ## Details
 * Instructor: Dr. Valerie Summet
   * Office: Bush 218D
-  * Office hours: TBD **OR** by appointment
+  * Office hours: T,R 2-3pm, W 10-11am, **OR** by appointment (just email me!)
 * Class time: MW 1-2:15pm
 * Class location: Bush 208
 * Textbooks: We will use a combination of two required textbooks:
