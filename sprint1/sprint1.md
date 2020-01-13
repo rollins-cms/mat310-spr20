@@ -1,4 +1,4 @@
-# Sprint 2: Formal Languages and Finite State Machines
+# Sprint 1: Formal Languages and Finite State Machines
 
 # Roadmap:
 * Teams
@@ -7,7 +7,7 @@
 * Requirements due: Mon. Feb. 10th at the end of class
 
 # Rationale: 
-Sprint 2 will show us how simple computational machines can work.  We will need some formal tools to help us logically approach basic computational principles: regular expression, regular languages, and finite automata.  Our goal is to be able to be able to take a special subclass of languages (called regular languages) and understand how a computer could recognize and programatically work with them.
+Sprint 1 will show us how simple computational machines can work.  We will need some formal tools to help us logically approach basic computational principles: regular expression, regular languages, and finite automata.  Our goal is to be able to be able to take a special subclass of languages (called regular languages) and understand how a computer could recognize and programatically work with them.
 
 # Responsibilities (What you need to know):
 1. Languages
@@ -15,8 +15,6 @@ Sprint 2 will show us how simple computational machines can work.  We will need 
    * Symbols
    * Strings or words
    * regular languages
-   * non-regular languages
-      * pumping lemma
  2. Finite Automata (or Finite State Machines)
    * state diagrams - be able to draw
       * accept and final states
@@ -40,7 +38,7 @@ Sprint 2 will show us how simple computational machines can work.  We will need 
    * Complete this problem set
    
 # Resources:  
-I may add to these as we go through the sprint.  Use the [Expert Request](https://rollins.co1.qualtrics.com/jfe/form/SV_0jNfbBpN1clDJfn?course=mat310s20&sprint=2) for more resources. 
+I may add to these as we go through the sprint.  Use the [Expert Request](https://rollins.co1.qualtrics.com/jfe/form/SV_0jNfbBpN1clDJfn?course=mat310s20&sprint=1) for more resources. 
    * Textbook readings: These readings cover the same topics, but do so in a different order and use slightly different notations in some cases.  You can read either or both.  My recommendation is that your team pick on or the other and use the 2nd as an extra resource.  In my opinion, FoC is a bit easier to understand, but ITC is more complete.
       * ITC: 0.1, pgs 13-14 (langauges and strings section), Chapter 1.1, 1.3 (omit proofs in *Equivalence with Finite Automata* section on pages 66-76; it's enough to know they are equivalent)
       * FoC: Chapter 3.1-3.4
@@ -54,7 +52,7 @@ I may add to these as we go through the sprint.  Use the [Expert Request](https:
   * TODO by Monday: Have "almost final" answers for all problems in problem set.  Some may still need group discussion or further clarification.
   * Monday 2/10: Do final check of problem set.  Make sure problem set is neat, tidy, and meets guidelines.  Turn in your problem set at the end of class.
   * TODO before next class: Take the practice quiz and check your answers.  Study as a group.  
-  * Wednesday 2/12: Quiz (30 minutes), Sprint 2 retrospective, and Sprint 3 planning.
+  * Wednesday 2/12: Quiz (30 minutes), Sprint 1 retrospective, and Sprint 2 planning.
 
 # Retrospective:
-  * Complete this [sprint retrospective survey](https://rollins.co1.qualtrics.com/jfe/form/SV_3rAIzhpHFYbIixf?course=mat310s20&sprint=2).  Each team member should complete a survey.
+  * Complete this [sprint retrospective survey](https://rollins.co1.qualtrics.com/jfe/form/SV_3rAIzhpHFYbIixf?course=mat310s20&sprint=1).  Each team member should complete a survey.
