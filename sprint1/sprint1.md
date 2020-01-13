@@ -16,6 +16,7 @@ I am having you read from a non-technical book about the value of Scrum, the met
    * Define "Backlog", "Burndown charts", "Planning Poker", "Retrospective"
    * Why do we use Scrum?  How is it related to Agile?  What are the core values of each?
    * Be able to use the Trello software.  
+   * Understand how we're adapting Scrum to Scrumage in this course
 2. Review Logic Basics (FoC: 1.1, 1.2, 1.5)
    * Variables and propositions
    * Conjunction, disjunction, negation, conditional, biconditional, exclusive or - logic, operators, and notation
@@ -40,6 +41,7 @@ The "Requirements" grade is the problem set.  The scrum artifacts will be graded
 ## Individual Requirements:
    * Understand the concepts on the Responsibilities list.
    * Read about Scrum.  Link to pdf is on Canvas.
+   * Read about [Scrumage and how it works](https://github.com/rollins-cms/mat310-spr20/blob/master/scrumage.md) in this course.
    * Get an account on Trello.com.  Google "Scrum for Trello" and "Burndown for Trello" and install both these extensions.
 
 ## Team Requirements:
