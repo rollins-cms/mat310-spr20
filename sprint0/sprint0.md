@@ -46,7 +46,7 @@ The "Requirements" grade is the problem set.  The scrum artifacts will be graded
 
 ## Team Requirements:
    * Set up a shared board on Trello with your tasks for Sprint 1.  Add me to your board, too (user id: vsummet)
-   * Complete this [problem set](./sprint1_prob_set.pdf).
+   * Complete this [problem set](./sprint0_prob_set.pdf).
 
 # Resources:  
 I may add to these as we go through the sprint.  Use the [Expert Request](https://rollins.co1.qualtrics.com/jfe/form/SV_0jNfbBpN1clDJfn?course=mat310s20&sprint=0) for more resources. 
@@ -55,7 +55,7 @@ I may add to these as we go through the sprint.  Use the [Expert Request](https:
    * [Overview of Scrum workflow](https://www.youtube.com/watch?time_continue=5&v=gy1c4_YixCo) (YouTube, 2min)
    * Video tutorials on Scrum & Agile.  There are tons.  Check out YouTube and linkedinlearning.com.  I also have books on the subject, if you would like.
    * [How to draw truth tables](https://docs.google.com/presentation/d/1NTgXBIC98R6yaCiDlf7gotO1NChB8LhzHTOwNvkOrgs/edit#slide=id.p) slide deck
-   * [Practice quiz](./sprint1_practice_quiz.pdf) and [answer key](./sprint1_practice_quiz_ans.pdf)
+   * [Practice quiz](./sprint0_practice_quiz.pdf) and [answer key](./sprint0_practice_quiz_ans.pdf)
       * A quick-reference sheet is on the last page of the quiz.  This is the material I would provide on a quiz.  You don't have to memorize it.
    * Binary numbering videos (~4 minutes): LinkedIn Learning - [Binary-The Language of Computers](https://www.linkedin.com/learning/digital-media-foundations/binary-the-language-of-computers), and [How to use 1's and 0's to make bigger numbers](https://www.linkedin.com/learning/digital-media-foundations/how-1s-and-0s-make-larger-numbers)
    * [Worked examples using truth tables to prove logical equivalences](https://www.linkedin.com/learning/programming-foundations-discrete-mathematics/solution-write-truth-tables) (LinkedIn Learning, 5min) 
