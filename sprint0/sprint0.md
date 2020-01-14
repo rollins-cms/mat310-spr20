@@ -39,6 +39,7 @@ I am having you read from a non-technical book about the value of Scrum, the met
 The "Requirements" grade is the problem set.  The scrum artifacts will be graded in a "Scrumage" grade.
 
 ## Individual Requirements:
+   * Complete the [ASSIST survey](https://rollins.co1.qualtrics.com/jfe/form/SV_cVk3y7r4fln1GUB) - You only need to do this once regardless of how many Scrumage classes you're in (Dr. Myers or mine).
    * Understand the concepts on the Responsibilities list.
    * Read about Scrum.  Link to pdf is on Canvas.
    * Read about [Scrumage and how it works](https://github.com/rollins-cms/mat310-spr20/blob/master/scrumage.md) in this course.
@@ -63,7 +64,7 @@ I may add to these as we go through the sprint.  Use the [Expert Request](https:
 
 # Reality Check:
   * On Wednesday, do basic team setup and introductions.
-  * TODO by next class (note that this encompasses a week of work because of the MLK holiday):  Setup team communication.  Get Trello accounts and do Scrum reading. Skim problem set, noting problems you have no idea where to start or are confused by.  Read and work through textbook readings.
+  * TODO by next class (note that this encompasses a week of work because of the MLK holiday):  ASSIST survey. Setup team communication.  Get Trello accounts and do Scrum reading. Skim problem set, noting problems you have no idea where to start or are confused by.  Start reading and working through textbook readings.
   * Wednesday class: Make sure everyone's on Trello.  Do sprint planning meeting.  Discuss the definitions of Scrum if there are any questions. Enter deliverables on Trello, categorize them into In-Progress and Backlog, and assign topics based on topics you had issues with.  Start problem sets together.  File any expert requests you need.
   * TODO by next class: Have "rough draft" answers for all problems in problem set.  Some may still need group discussion or further clarification.
   * Monday: Do final check of problem set.  Make sure problem set is neat, tidy, and meets guidelines.  Turn in your problem set at the end of class.
