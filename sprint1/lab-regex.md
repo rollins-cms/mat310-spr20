@@ -1,13 +1,24 @@
 # Lab - Regular Expressions
 
-This short lab will let you practice using Codio and expose you to regular expressions with `grep`, a standard Unix program for searching the contents of files.
+This short lab will expose you to regular expressions with `grep`, a standard Unix program for searching the contents of files.
+
+Insert XXX here about usefulness of searching for a pattern in a sea of data - Princeton notes.
 
 ## Getting Started
-Play around with some features of Codio.
-* Open a terminal by clicking on the small computer browser icon at the top of the file tree (between the padlock and the play icons).
-* In the `View>Panels` and `View>Layouts` menu, you can configure your screen however you like.  Some assignments will start with a default view, but you can change it to your liking.
-* There are also options in the `View` menu for changing font size and color scheme.  There is also a useful `Wrap` option which wraps lines of files to keep them in your viewable screen.
-* You can navigate the sections of this lab by clicking on the "hamburger menu" (circle with 3 horizontal lines in it) on the right hand side of this panel and selecting the section you want.  You can get rid of the section navigation by clicking the same menu again.
+This is a hands-on activity which is meant to be done at a computer.  The easiest way to do this is on a Mac.  I recommend that your team make time to do this activity in the Mac lab (Bush 308 or in Olin Library).  I have tested this activity in the Bush Mac lab.  Your personal Mac laptop (should you own one) will probably also work, but no guarantees.
+
+## Getting Started
+* On a Mac, open the search window by clicking on the small magnifying glass (upper right hand corner).
+* Type in "terminal" and click to open the Terminal application -- the terminal is a powerful window to the inner workings of your computer.  Usually, we interact with computers via Graphical User Interfaces (GUIs) consisting of windows, icons, a mouse, etc.  But you don't have to use the GUI.  The Terminal gives us access to another way of interacting with our computer.
+* In the terminal, you will see some information, followed by something that looks like:
+```
+bushimac11:~ vsummet$
+```
+This is called the *prompt*.  It indicates that the computer is ready for you to type a command to interact with it.  Yours will include a different computer name (I was on `bushimac11` when writing this activity) and a different user ID (you are not `vsummet`).  In this lab, we'll use the generic:
+```
+prompt$
+```
+to indicate that a command should be typed at a prompt.  You should follow along with this activity and type the commands and observe the output for yourself.  If something goes wrong, you can almost always get back to a prompt by typing `Ctrl-c` -- that is, hold down the control key and type a `c` at the same time.
 
 ## Now You Have Two Problems
 
@@ -27,19 +38,17 @@ Now you have two problems.
     
 `grep` searches the target file for any strings matching the pattern described by the regular expression and prints them to the screen.
 
+To run the `grep` utility, we'll type `grep` at the prompt.
+
 ### Wordlist
 
-There is a tradition of including a plain text dictionary of words as part of a Unix installation, for use with spellchecking and password programs. The list we used for the password cracking project in CMS230 was a medium sized example.
-
-To begin, type `sudo apt-get install wamerican-large`.  This installs a large list of American words into the directory `/usr/share/dict`. Other less patriotic wordlists are also available. You can run `sudo apt-get install wordlist` to see a list of all the options.
-
-Remind yourself: what does the `sudo` command do?
+There is a tradition of including a plain text dictionary of words as part of a Unix installation, for use with spellchecking and password programs. On Macs, this dictionary is preinstalled in `/usr/share/dict/words`.  There are other dictionaries too including ones with proper names.  You can install many more as well.
 
 ## Searching for a Substring
 The simplest `grep` case is to search target file for a specified substring:
 
 ```
-prompt$ grep "cat" /usr/share/dict/american-english-large
+prompt$ grep "cat" /usr/share/dict/words
 ```
 
 The first argument is the search string enclosed in quotes. It isn't strictly required to use quotes with every regex string, but some complex patterns require it, so I like to use it as a default. You could also enclose the string in single quotes.
@@ -51,17 +60,17 @@ The command prints all words in the file containing the string `cat`. This is a 
 Other substring choices may yield fewer results:
 
 ```
-grep "platypus" /usr/share/dict/american-english-large
+grep "platypus" /usr/share/dict/words
 ```
 
-* **Question 1:** Write a command which finds all the words with 2 consecutive a's.
-* **Question 2:** List all the words that have 3 consecutive a's. Separate them by commas or specify that there are no words with three consecutive a's.
+* **Question 1:** Write a command which finds all the words with 2 consecutive s's.
+* **Question 2:** List all the words that have 3 consecutive s's (or specify that there are none if that's what your results indicated). 
 
 ## Matching Beginning and Endings
 Use the `^` symbol to denote the beginning of a line. Patterns that start with `^` will only be matched if they occur at the beginning of the line. To find all words that begin with `x`:
 
 ```
-prompt$ grep "^x" /usr/share/dict/american-english-large
+prompt$ grep "^x" /usr/share/dict/words
 ```
 
 * **Question 3:** Write a command to all the words that begin with `q`.
@@ -69,16 +78,22 @@ prompt$ grep "^x" /usr/share/dict/american-english-large
 Use `$` to match the end of a line. To find all of the words that end with `esses`:
 
 ```
-prompt$ grep "esses$" /usr/share/dict/american-english-large
+prompt$ grep "esses$" /usr/share/dict/words
 ```
 
-Write a command which find all the words that end with `ingly`.
+* **Question 4:** Write a command which find all the words that end with `ingly`.
 
 If you combine both `^` and `$`, you can specify a line that must be matched exactly:
 
 ```
-prompt$ grep "^platypus$" /usr/share/dict/american-english-large
+prompt$ grep "^ship$" /usr/share/dict/words
 ```
+
+Compare that output to that generated by the command:
+```
+prompt$ grep "ship$" /usr/share/dict/words
+```
+
 
 ## Character Sets
 `grep` becomes more powerful when you allow it to match patterns that contain multiple options.
@@ -94,7 +109,7 @@ Sets of characters are enclosed in square brackets. For example,
 When you give `grep` a character set, it's allowed to match any of the options that occur within the set. For example, find all the words in the wordlist that start with `q` followed by a vowel but not `qu`:
 
 ```
-prompt$ grep "^q[aeio]" /usr/share/dict/american-english-large
+prompt$ grep "^q[aeio]" /usr/share/dict/words
 ```
 
 Questions like the previous one can be made easier by using `^` as the first symbol in a set, which matches everything *except* the characters in the set:
@@ -108,10 +123,10 @@ Notice: the `^` character is **inside** the brackets forming our character set. 
 Find all the words that contain characters other than a normal lowercase or uppercase letter:
 
 ```
-prompt$ grep "[^a-zA-Z]" /usr/share/dict/american-english-large
+prompt$ grep "[^a-zA-Z]" /usr/share/dict/words
 ```
     
-* **Question 4:** Write a command to find all the words that start with `q` but not `qu` using the exclusionary character set approach. Hint: notice that this problem doesn't state that `q` must be followed by a vowel! It can be followed by any letter except a `u`.
+* **Question 5:** Write a command to find all the words that start with `q` but not `qu` using the exclusionary character set approach. Hint: notice that this problem doesn't state that `q` must be followed by a vowel! It can be followed by any letter except a `u`.
 
 ## Kleene Closure
 Use `*` to match 0 or more instances of a pattern. This is often combined with `.` as a generic placeholder that can match any character. `.*` is therefore a wildcard that matches any number (including zero) of arbitrary characters.
@@ -119,11 +134,11 @@ Use `*` to match 0 or more instances of a pattern. This is often combined with `
 Find the words of any length that start with `q` and end with `ing`:
 
 ```
-prompt$ grep "^q.*ing$" /usr/share/dict/american-english-large
+prompt$ grep "^q.*ing$" /usr/share/dict/words
 ```
 
-* **Question 5:** I'm thinking of a word that starts with he and ends with he. The word is either ____ or ____ 
-* **Question 6:** Write a command which could be used to find all the words that contain no vowels. Hint: use `^` and `$` to specify that the entire line must have no vowels.
+* **Question 6:** I'm thinking of a word that starts with `he` and ends with `he`. The word is either ____ , ___, or ____ 
+* **Question 7:** Write a command which could be used to find all the words that contain no vowels. Hint: use `^` and `$` to specify that the entire line must have no vowels.
 
 ## Repetition
 The syntax `\{n\}` lets you repeat a pattern `n` times. This is a little weird. The `\` functions as an escape character to indicate
@@ -131,15 +146,15 @@ that you're using `{` and `}` as control characters, rather than the literal lef
 frustrating things about regular expressions: some control characters, like `*`, are used as-is, but others need the special 
 backslash escape prefix.
 
-Find all the words with 4 vowels:
+Find all the words with 4 consecutive vowels:
 
 ```
-prompt$ grep "[aeiou]\{4\}" /usr/share/dict/american-english-large
+prompt$ grep "[aeiou]\{4\}" /usr/share/dict/words
 ```
 
-* **Question 7:** Write a command to find all the words with 5 consecutive consonants.
+* **Question 8:** Write a command to find all the words with 5 consecutive consonants.
 
-**For fun: find the words with the most consecutive consonants by trying larger values of `n`.**
+* **Question 9:** What word(s) in the dictionary contain the most consecutive consonants? The most consecutive vowels?  Hint: just trying larger values of `n`.**
 
 ## Union
 Use `\|` to match one of a set of options. Again, the use of the `\` is obnoxious. Sorry, not sorry.
@@ -147,13 +162,13 @@ Use `\|` to match one of a set of options. Again, the use of the `\` is obnoxiou
 Find all the words that start or end with `x`:
 
 ```
-prompt$ grep "^x\|x$" /usr/share/dict/american-english-large
+prompt$ grep "^x\|x$" /usr/share/dict/words
 ```
 
 Parentheses `\(` and `\)` can be used to group expressions. For example, to match all words starting with either `aa` or `ee`:
 
 ```
-prompt$ grep "^\(aa\|ee\)" /usr/share/dict/american-english-large
+prompt$ grep "^\(aa\|ee\)" /usr/share/dict/words
 ```
 
 ## Advanced Regular Expressions (a.k.a Things that Make Your Brain Hurt)
@@ -162,12 +177,25 @@ Here's one last advanced regex feature. If you enclose a pattern in parentheses,
 For example, match any words having double letters:
 
 ```
-prompt$ grep "\(.\)\1" /usr/share/dict/american-english-large
+prompt$ grep "\(.\)\1" /usr/share/dict/words
 ```
 
 The parentheses grouping `\(.\)` matches any character. The `\1` then requires the analyzer to match whatever character was captured during the evaluation of the parenthesis expression.
 
 Note that this could not be achieved by using `[a-z]\{2\}`. Try it out if you're unsure why.
+* **Question 10:** What does the regular expression `[a-z]\{2\}` actually match?
+
+## More Pain!
+What if we wanted to match words with consecutive pairs of double letters? Use a second pair of parentheses to capture a second letter, then match it a second time with `\2`:
+
+```
+prompt$ grep "\(.\)\1\(.\)\2" /usr/share/dict/words
+```
+
+* **Question 11:** I'm thinking of a word that has *four* consecutive pairs of double letters.  What is it?
+
+This example also illustrates how the regex evaluators contained in real programming environments are more powerful than the default theoretical model of regular expressions, which assumed that we had no available memory for elements of the string and therefore couldn't keep track of anything.
+
 
 ## Wrap-Up
 This is really just a cursory overview of the features of `grep` and regular expressions in Unix. A few final notes:
@@ -180,20 +208,6 @@ This is really just a cursory overview of the features of `grep` and regular exp
     
 - The general answer to questions about pattern matching, substring replacement, etc. is "Use `grep` and regular expressions."
 
-
-What if we wanted to match words with consecutive pairs of double letters? Use a second pair of parentheses to capture a second letter, then match it a second time with `\2`:
-
-```
-prompt$ grep "\(.\)\1\(.\)\2" /usr/share/dict/american-english-large
-```
-
-I'm thinking of a word that has three consecutive pairs of double letters:
-
-```
-prompt$ grep "\(.\)\1\(.\)\2\(.\)\3" /usr/share/dict/american-english-large
-```
-
-This example also illustrates how the regex evaluators contained in real programming environments are more powerful than the default theoretical model of regular expressions, which assumed that we had no available memory for elements of the string and therefore couldn't keep track of anything.
 
 
 
