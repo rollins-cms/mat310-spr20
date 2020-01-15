@@ -46,7 +46,7 @@ The "Requirements" grade is the problem set.  The scrum artifacts will be graded
    * Get an account on Trello.com.  Google "Scrum for Trello" and "Burndown for Trello" and install both these extensions.
 
 ## Team Requirements:
-   * Set up a shared board on Trello with your tasks for Sprint 1.  Add me to your board, too (user id: vsummet)
+   * Set up a shared board on Trello with your tasks for Sprint 0.  Add me to your board, too (user id: valeriesummet)
    * Complete this [problem set](./sprint0_prob_set.pdf).
 
 # Resources:  
@@ -69,7 +69,7 @@ I may add to these as we go through the sprint.  Use the [Expert Request](https:
   * TODO by next class: Have "rough draft" answers for all problems in problem set.  Some may still need group discussion or further clarification.
   * Monday: Do final check of problem set.  Make sure problem set is neat, tidy, and meets guidelines.  Turn in your problem set at the end of class.
   * TODO before next class: Take the practice quiz and check your answers.  Study as a group.  
-  * Wednesday: Quiz (30 minutes), Sprint 1 retrospective, and Sprint 2 planning.
+  * Wednesday: Quiz (30 minutes), Sprint 0 retrospective, and Sprint 1 planning.
 
 # Retrospective:
   * Complete this [sprint retrospective survey](https://rollins.co1.qualtrics.com/jfe/form/SV_3rAIzhpHFYbIixf?course=mat310s20&sprint=0).  Each team member should complete a survey.
