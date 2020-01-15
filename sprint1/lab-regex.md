@@ -1,20 +1,35 @@
 # Lab - Regular Expressions
 
-This short lab will expose you to regular expressions with `grep`, a standard Unix program for searching the contents of files.
+"Regular expressions" in a programming environment means something slightly different (and more powerful) than "regular expressions" as a concept in formal language theory.  Programmers usually mean the former, while mathematicians usually mean the latter.  This short lab will expose you to (the programmer version of) regular expressions with `grep`, an indispensable Unix programming tool (for decades!) for searching the contents of files. 
 
-Insert XXX here about usefulness of searching for a pattern in a sea of data - Princeton notes.
+It's amazingly useful to be able to search for a pattern within a huge data file without having to pre-process the data (e.g. load it into an Excel spreadsheet or write a program to manipulate into a manageable format).  Take these examples:
+
+### Example 1 (from genomics):
+A nucleic acid is represented by the letters `a`, `c`, `g`, or `t`.  A genome is a string of nucleic acids.  Fragile X Syndrome is a genome having an occurrence of `gcg` followed by any number `cgg` or `agg` triplets followed by `ctg`.  Does a large file containing many genome's worth of data have a genome with Fragile X Syndrome? 
+
+### Example 2 (from commercial computing):
+An email address is a sequence of characters consisting of:
+1. a sequence of letters followed by
+2. the character `@` followed by
+3. a non-empty sequence of lowercase letters followed by
+4. a `.` followed by
+5. `com` or `edu`  
+Given a large file of email addresses, can we determine which were malformed (perhaps by data entry errors)?
+
+Again, tools which have existed for decades can help us easily answer problems of these sorts.
 
 ## Getting Started
-This is a hands-on activity which is meant to be done at a computer.  The easiest way to do this is on a Mac.  I recommend that your team make time to do this activity in the Mac lab (Bush 308 or in Olin Library).  I have tested this activity in the Bush Mac lab.  Your personal Mac laptop (should you own one) will probably also work, but no guarantees.
+This is a hands-on activity which is meant to be done at a computer.  The easiest way to do this is on a Mac (because Macs are built on BSD which is a variation of the Unix operating system).  I recommend that your team make time to do this activity in the Mac lab (Bush 308 or in Olin Library).  I have tested this activity in the Bush Mac lab.  Your personal Mac laptop (should you own one) will probably also work, but no guarantees.
 
 ## Getting Started
-* On a Mac, open the search window by clicking on the small magnifying glass (upper right hand corner).
-* Type in "terminal" and click to open the Terminal application -- the terminal is a powerful window to the inner workings of your computer.  Usually, we interact with computers via Graphical User Interfaces (GUIs) consisting of windows, icons, a mouse, etc.  But you don't have to use the GUI.  The Terminal gives us access to another way of interacting with our computer.
+* On a Mac, open the Spotlight search window by clicking on the small magnifying glass (upper right hand corner).
+* Type in "terminal" and click to open the Terminal application -- the terminal is a powerful window to the inner workings of your computer.  Usually, we interact with computers via Graphical User Interfaces (GUIs) consisting of windows, icons, a mouse, etc.  But you don't have to use the GUI.  The Terminal gives us access to another way of interacting with our computer.  Instead of pointing-and-clicking, we will type powerful, (seemingly) arcane commands to instruct the computer to do things.  Protip: think of it like casting computer spells and start referring to yourself as "Harry" or "Hermione".  
+
 * In the terminal, you will see some information, followed by something that looks like:
 ```
 bushimac11:~ vsummet$
 ```
-This is called the *prompt*.  It indicates that the computer is ready for you to type a command to interact with it.  Yours will include a different computer name (I was on `bushimac11` when writing this activity) and a different user ID (you are not `vsummet`).  In this lab, we'll use the generic:
+This is called the *prompt*.  It indicates that the computer is ready for you to type a command to interact with it.  Yours will include a different computer name (I was on `bushimac11` when writing this activity) and a different user ID (you are not `vsummet` afterall; you are Harry/Hermione).  In this lab, we'll use the generic:
 ```
 prompt$
 ```
