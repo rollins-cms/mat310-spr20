@@ -1,6 +1,6 @@
 # Lab - Regular Expressions
 
-"Regular expressions" in a programming environment means something slightly different (and more powerful) than "regular expressions" as a concept in formal language theory.  Programmers usually mean the former, while mathematicians usually mean the latter.  This short lab will expose you to (the programmer version of) regular expressions with `grep`, an indispensable Unix programming tool (for decades!) for searching the contents of files. 
+"Regular expressions" in a programming environment means something slightly different (and more powerful) than "regular expressions" as a concept in formal language theory.  Programmers usually mean the former, while mathematicians usually mean the latter.  This short lab will expose you to the programmer version of regular expressions with `grep`, an indispensable Unix programming tool (for decades!) for searching the contents of files. 
 
 It's amazingly useful to be able to search for a pattern within a huge data file without having to pre-process the data (e.g. load it into an Excel spreadsheet or write a program to manipulate into a manageable format).  Take these examples:
 
@@ -16,7 +16,7 @@ An email address is a sequence of characters consisting of:
 5. `com` or `edu`  
 Given a large file of email addresses, can we determine which were malformed (perhaps by data entry errors)?
 
-Again, tools which have existed for decades can help us easily answer problems of these sorts.
+The answer to each of these can be a single command. Again, tools which have existed for decades can help us easily answer problems like these.
 
 ## Getting Started
 This is a hands-on activity which is meant to be done at a computer.  The easiest way to do this is on a Mac (because Macs are built on BSD which is a variation of the Unix operating system).  I recommend that your team make time to do this activity in the Mac lab (Bush 308 or in Olin Library).  I have tested this activity in the Bush Mac lab.  Your personal Mac laptop (should you own one) will probably also work, but no guarantees.
@@ -67,7 +67,7 @@ prompt$ grep "cat" /usr/share/dict/words
 
 The first argument is the search string enclosed in quotes. It isn't strictly required to use quotes with every regex string, but some complex patterns require it, so I like to use it as a default. You could also enclose the string in single quotes.
 
-The second argument is the complete path to the dictionary file. Remember that Unix file paths always begin at the root directory, which is denoted by `/`. Pro tip: press TAB to autocomplete the part of the path that you're currently typing.
+The second argument is the complete path to the dictionary file we want to search. Remember that Unix file paths always begin at the root directory, which is denoted by `/`. Pro tip: press TAB to autocomplete the part of the path that you're currently typing.
 
 The command prints all words in the file containing the string `cat`. This is a lot of words!
 
@@ -118,7 +118,7 @@ Sets of characters are enclosed in square brackets. For example,
     
 - `[aeiouAEIOU]` is the set of lowercase and uppercase vowel characters
 
-- `[a-zA-Z0-9]` is the compact way or writing the set of all lowercase letters, uppercase letters, and digits
+- `[a-zA-Z0-9]` is the compact way of writing the set of all lowercase letters, uppercase letters, and digits
     
 When you give `grep` a character set, it's allowed to match any of the options that occur within the set. For example, find all the words in the wordlist that start with `q` followed by a vowel but not `qu`:
 
@@ -134,7 +134,7 @@ Questions like the previous one can be made easier by using `^` as the first sym
     
 Notice: the `^` character is **inside** the brackets forming our character set.  This is different than a `^` that appears at the start of an expression and matches the beginning of a string.    
     
-Find all the words that contain characters other than a normal lowercase or uppercase letter:
+Find all the words in the dictionary that contain characters other than a normal lowercase or uppercase letter:
 
 ```
 prompt$ grep "[^a-zA-Z]" /usr/share/dict/words
@@ -168,7 +168,7 @@ prompt$ grep "[aeiou]\{4\}" /usr/share/dict/words
 
 * **Question 8:** Write a command to find all the words with 5 consecutive consonants.
 
-* **Question 9:** What word(s) in the dictionary contain the most consecutive consonants? The most consecutive vowels?  Hint: just trying larger values of `n`.**
+* **Question 9:** What word(s) in the dictionary contain the most consecutive consonants? The most consecutive vowels?  Hint: just try larger values of `n`.**
 
 ## Union
 Use `\|` to match one of a set of options. Again, the use of the `\` is obnoxious. Sorry, not sorry.
