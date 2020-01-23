@@ -4,7 +4,9 @@
 * Teams
 * Sprint Duration: Wed. Jan 29 - Wed. Feb. 12
 * Quiz date/time: Wed. Feb. 12th at the beginning of class
-* Requirements due: Mon. Feb. 10th at the end of class
+* Requirements due: 
+    * Problem set on Mon. Feb. 10th at the end of class
+    * Regular Expressions lab writeup on Wed. Feb. 12th at the start of class.
 
 # Rationale: 
 Sprint 1 will show us how simple computational machines can work.  We will need some formal tools to help us logically approach basic computational principles: regular expressions, regular languages, and finite automata.  Our goal is to be able to be able to take a special subclass of languages (called regular languages) and understand how a computer could recognize and programatically work with them.  We'll also play around with what programmers call "regular expressions" which are (related but) different from the formal language descriptors. 
@@ -28,10 +30,11 @@ Sprint 1 will show us how simple computational machines can work.  We will need 
     * equivalence with FSA
     
 # Requirements (What you need to do):
-1. The requirements grade is the problem set.  The Scrumage grade is assessed separately via your Trello board, SCRUM artifacts and standup meetings.
+1. The requirements grade is the problem set and lab answers.  The Scrumage grade is assessed separately via your Trello board, SCRUM artifacts and standup meetings.
 
 ## Individual Requirements:
    * Understand the concepts on the Responsibilities list
+   * Complete the [regular expressions](./lab-regex.md) lab and prepare a document with the answers to the questions in the lab.
 
 ## Team Requirements:
    * Set up a shared board with this sprint's requirements (add me to your board - Trello ID: valeriesummet)
@@ -47,13 +50,13 @@ I may add to these as we go through the sprint.  Use the [Expert Request](https:
    
 # Reality Check:
   * On Wednesday 1/29, do previous sprint retrospective and sprint planning meeting.  Skim problem set to give some context for your readings.
-  * TODO by next class:  Enter deliverables on Trello, categorize them into buckets.  Assign topics and responsibilities.  Read and work through textbook readings.
+  * TODO by next class:  Enter deliverables on Trello, categorize them.  Assign topics and responsibilities.  Read and work through textbook readings.  Skim problem set.
   * Monday class 2/3: File expert requests for Wednesday or next Monday.  Discuss and begin problem set as a group.
   * TODO by next class: Complete rough draft of most of problem set.  
-  * Wednesday 2/5: Check problems in class, continue work on problem set.
+  * Wednesday 2/5: Check problems in class, continue work on problem set.  Start regular experssion lab.
   * TODO by Monday: Have "almost final" answers for all problems in problem set.  Some may still need group discussion or further clarification.
-  * Monday 2/10: Do final check of problem set.  Make sure problem set is neat, tidy, and meets guidelines.  Turn in your problem set at the end of class.
-  * TODO before next class: Take the practice quiz and check your answers.  Study as a group.  
+  * Monday 2/10: Do final check of problem set.  Make sure problem set is neat, tidy, and meets guidelines.  Turn in your problem set at the end of class. 
+  * TODO before next class: Finish regular expressions lab and writeup your answers.  Take the practice quiz and check your answers.  Study as a group.  
   * Wednesday 2/12: Quiz (30 minutes), Sprint 1 retrospective, and Sprint 2 planning.
 
 # Retrospective:
