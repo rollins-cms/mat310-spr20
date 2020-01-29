@@ -45,8 +45,8 @@ I may add to these as we go through the sprint.  Use the [Expert Request](https:
    * Textbook readings: These readings cover the same topics, but do so in a different order and use slightly different notations in some cases.  You can read either or both.  My recommendation is that your team pick on or the other and use the 2nd as an extra resource.  In my opinion, FoC is a bit easier to understand, but ITC is more complete.
       * ITC: 0.1, pgs 13-14 (langauges and strings section), Chapter 1.1, 1.3 (omit proofs in *Equivalence with Finite Automata* section on pages 66-76; it's enough to know they are equivalent)
       * FoC: Chapter 3.1-3.4
-      * Easy-to-use, [online tool](http://madebyevan.com/fsm/) for drawing FSA
-      * [Practice quiz](./sprint1_practice_quiz.pdf) and [answer key](./sprint1_practice_quiz_ans.pdf)
+   * Easy-to-use, [online tool](http://madebyevan.com/fsm/) for drawing FSA
+   * [Practice quiz](./sprint1_practice_quiz.pdf) and [answer key](./sprint1_practice_quiz_ans.pdf)
    
 # Reality Check:
   * On Wednesday 1/29, do previous sprint retrospective and sprint planning meeting.  Skim problem set to give some context for your readings.
