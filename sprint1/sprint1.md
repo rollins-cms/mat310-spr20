@@ -18,9 +18,9 @@ Sprint 1 will show us how simple computational machines can work.  We will need 
    * Strings or words
    * regular languages
  2. Finite Automata (or Finite State Machines)
-   * state diagrams - be able to draw
-      * accept and final states
-      * transitions
+    * state diagrams - be able to draw
+       * accept and final states
+       * transitions
  3. Regular operations
     * Union
     * Concatenation
