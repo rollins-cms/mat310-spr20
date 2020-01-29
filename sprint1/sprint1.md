@@ -38,7 +38,7 @@ Sprint 1 will show us how simple computational machines can work.  We will need 
 
 ## Team Requirements:
    * Set up a shared board with this sprint's requirements (add me to your board - Trello ID: valeriesummet)
-   * Complete this problem set: [PDF with space for answers](./sprint1_problem_set_space.pdf) or [PDF with only the questions](./sprint1_problem_set_nospace.pdf)
+   * Complete this problem set: [PDF with space for answers](./sprint1_prob_set_space.pdf) or [PDF with only the questions](./sprint1_prob_set_nospace.pdf)
    
 # Resources:  
 I may add to these as we go through the sprint.  Use the [Expert Request](https://rollins.co1.qualtrics.com/jfe/form/SV_0jNfbBpN1clDJfn?course=mat310s20&sprint=1) for more resources. 
