@@ -21,26 +21,26 @@ In Sprint 2, we will continue our exploration of regular languages.  Now that we
    *
 
 ## Individual Requirements:
-   *
+   * Understand the responsibilities on the list.
 
 ## Team Requirements:
-   * Track tasks and generate a burndown chart
-       * You can use technologies other than Trello in this sprint, but you must have some common list of tasks which you can track (and I can view) and a representation of the burndown chart
-       * The problem set
+* Track tasks and generate a burndown chart (You can use technologies other than Trello in this sprint, but you must have some common list of tasks which you can track (and I can view) and a representation of the burndown chart.)
+    * The problem set
    
 # Resources:  
 I may add to these as we go through the sprint.  Use the [Expert Request](https://rollins.co1.qualtrics.com/jfe/form/SV_0jNfbBpN1clDJfn?course=mat310s20&sprint=2) for more resources. 
-   * 
+
+* There are two videos posted on Canvas showing the NFA to DFA conversion algorithm.
    
 # Reality Check:
   * On Wednesday, after the Sprint 1 quiz, do the Sprint 1 retrospective.  Do sprint planning meeting (generate sprint backlog and time estimations).  Skim the problem set.
-  * TODO by next class:  .
-  * Monday class: 
-  * TODO by next class: 
-  * Wednesday: 
-  * TODO by next class: 
+  * TODO by next class:  Skim readings, making notes of page/section numbers for responsibilities on the list or problems on the problem set.
+  * Monday class: Go over problem set with teammates and identify areas of general confusion.  Ask questions or file expert requests.
+  * TODO by next class: Focus on any areas your group is still struggling with and file expert requests to check problems or ask questions.
+  * Wednesday: Make sure everyone understands problem areas.
+  * TODO by next class: Complete rough draft of all answers for problem set (except 1-2 which might need group discussion).
   * Monday: Do final check of problem set.  Make sure problem set is neat, tidy, and meets guidelines.  Turn in your problem set at the end of class.
-  * TODO before next class: Play review game if you haven't alreay. Take the practice quiz and check your answers.  Study as a group.  
+  * TODO before next class: Take the practice quiz and check your answers.  Study as a group.  
   * Wednesday: Quiz (30 minutes), Sprint 2 retrospective, and Sprint 3 planning.
 
 # Retrospective:
