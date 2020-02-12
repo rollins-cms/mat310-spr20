@@ -14,14 +14,14 @@ In Sprint 2, we will continue our exploration of regular languages.  Now that we
    * Formal defintion
    * Differences between DFA and NFA
    * Conversion to DFA (equivalence to DFA!)
-   * Building more complex NFA from smaller DFA/NFA
+   * Building more complex NFA from smaller DFA/NFA (Related to relationship between regular expressions and NFAs)
 2. The pumping lemma
    * Proof by contradiction technique
    * Decomposition of string into xy^iz
    * pumping length p and restrictions on it
 
 # Requirements (What you need to do):
-You deliverables grade for this sprint is the problem set.  The Scrumage grade is determined separately.
+Your deliverables grade for this sprint is the problem set.  The Scrumage grade is determined separately.
 
 ## Individual Requirements:
 * Understand the responsibilities on the list.
@@ -37,7 +37,7 @@ I may add to these as we go through the sprint.  Use the [Expert Request](https:
 * Textbook readings:
    * IToC: 1.2, 1.4
    * FoC: 3.5, 3.6, 3.7
-* [Overview of NFAs](https://www.youtube.com/watch?v=f-EUv9LHi0k) - includes how to trace a string using a NFA, the formal definition of NFAs, and how to identify an NFA
+* [Overview of NFAs](https://www.youtube.com/watch?v=f-EUv9LHi0k) (YouTube, 10min)- includes how to trace a string using a NFA, the formal definition of NFAs, and how to identify an NFA
 * There are two videos posted on Canvas (in the Pages section) that I recorded showing the NFA to DFA conversion algorithm.  This is a crucial step to understanding the equivalence of NFAs and DFAs.
 * [Pumping Lemma Video](https://www.youtube.com/watch?v=g4e2RElzCSQ) (YouTube, 30min) Quite possibly the most accessible explanation of the pumping lemma I've seen.
    
