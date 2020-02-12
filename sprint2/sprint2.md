@@ -7,13 +7,14 @@
 * Requirements due: Feb. 24 at the end of class 
 
 # Rationale: 
-In Sprint 2, we will continue our exploration of regular languages.  Now that we've constructed **deterministic** finite automata, we'll move on to **nondeterministic** finite automata.  Nondeterminisim means that we can have more than one outcome even when the input is fixed.  At first pass, there seems to be no relation between DFA and NDFA, but as we will see, they are equivalent!  We'll see what makes a finite state machine diagram nondeterministric and then learn how to convert NDFAs to DFAs and see that they are equivalent.  We'll see that NDFAs can actually be more concise and simple compared to DFAs.  Moreover, because of several key closure theorems they can be combined easily to make even more complex machines using union, concatenation, and Kleene star operations very easily!  By the end of this sprint, we'll have 3 ways to express regular langauges: DFAs, NFAs, and regular expressions.
+In Sprint 2, we will continue our exploration of regular languages.  Now that we've constructed **deterministic** finite automata, we'll move on to **nondeterministic** finite automata.  Nondeterminisim means that we can have more than one outcome even when the input is fixed.  At first pass, there seems to be no relation between DFAs and NFAs, but as we will see, they are equivalent!  We'll see what makes a finite state machine diagram nondeterministric and then learn how to convert NDFAs to DFAs and see that they are equivalent.  We'll see that NDFAs can actually be more concise and simple compared to DFAs.  Moreover, because of several key closure theorems they can be combined easily to make even more complex machines using union, concatenation, and Kleene star operations very easily!  By the end of this sprint, we'll have 3 ways to express regular langauges: DFAs, NFAs, and regular expressions.  At the end of this sprint, we'll show that are are language (called non-regular languages) which can't be recognized by either DFAs or NFAs (and also can't be expressed using regular expressions).
 
 # Responsibilities (What you need to know):
-1. 
-   * 
-   * 
-   *  
+1. Non-deterministic finite automata
+   * Formal defintion
+   * Differences between DFA and NFA
+   * Conversion to DFA (equivalence to DFA!)
+   * Building more complex NFA from smaller DFA/NFA
 2. The pumping lemma
    * Proof by contradiction technique
    * Decomposition of string into xy^iz
@@ -34,8 +35,8 @@ You deliverables grade for this sprint is the problem set.  The Scrumage grade i
 I may add to these as we go through the sprint.  Use the [Expert Request](https://rollins.co1.qualtrics.com/jfe/form/SV_0jNfbBpN1clDJfn?course=mat310s20&sprint=2) for more resources. 
 
 * Textbook readings:
-   * IToC:
-   * FoC: 
+   * IToC: 1.2, 1.4
+   * FoC: 3.5, 3.6, 3.7
 * [Overview of NFAs](https://www.youtube.com/watch?v=f-EUv9LHi0k) - includes how to trace a string using a NFA, the formal definition of NFAs, and how to identify an NFA
 * There are two videos posted on Canvas that I recorded showing the NFA to DFA conversion algorithm.  This is a crucial step to understanding the equivalence of NFAs and DFAs.
 * [Pumping Lemma Video](https://www.youtube.com/watch?v=g4e2RElzCSQ) (YouTube, 30min) Quite possibly the most accessible explanation of the pumping lemma I've seen.
