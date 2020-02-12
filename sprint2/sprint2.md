@@ -29,7 +29,7 @@ You deliverables grade for this sprint is the problem set.  The Scrumage grade i
 
 ## Team Requirements:
 * Track tasks and generate a burndown chart -- You can use technologies other than Trello in this sprint, but you must have some common list of tasks which you can track (and I can view) and a representation of the burndown chart.
-* [The problem set](./sprint2_problem_set.pdf)
+* [The problem set](./sprint2_prob_set.pdf)
    
 # Resources:  
 I may add to these as we go through the sprint.  Use the [Expert Request](https://rollins.co1.qualtrics.com/jfe/form/SV_0jNfbBpN1clDJfn?course=mat310s20&sprint=2) for more resources. 
