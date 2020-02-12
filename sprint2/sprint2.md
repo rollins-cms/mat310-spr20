@@ -38,7 +38,7 @@ I may add to these as we go through the sprint.  Use the [Expert Request](https:
    * IToC: 1.2, 1.4
    * FoC: 3.5, 3.6, 3.7
 * [Overview of NFAs](https://www.youtube.com/watch?v=f-EUv9LHi0k) - includes how to trace a string using a NFA, the formal definition of NFAs, and how to identify an NFA
-* There are two videos posted on Canvas that I recorded showing the NFA to DFA conversion algorithm.  This is a crucial step to understanding the equivalence of NFAs and DFAs.
+* There are two videos posted on Canvas (in the Pages section) that I recorded showing the NFA to DFA conversion algorithm.  This is a crucial step to understanding the equivalence of NFAs and DFAs.
 * [Pumping Lemma Video](https://www.youtube.com/watch?v=g4e2RElzCSQ) (YouTube, 30min) Quite possibly the most accessible explanation of the pumping lemma I've seen.
    
 # Reality Check:
