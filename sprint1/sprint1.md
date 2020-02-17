@@ -49,6 +49,7 @@ I may add to these as we go through the sprint.  Use the [Expert Request](https:
    * [Practice quiz](./sprint1_practice_quiz.pdf) and [answer key](./sprint1_practice_quiz_ans.pdf)
    * [Video overview of DFA](https://www.youtube.com/watch?v=6yh3FLKgAGQ) (YouTube, 12 mins) - Includes formal definition of a DFA, how to write a transition table, and a simple example of a DFA for a specific language
    * [Video overview of (mathematical) regular expressions](https://www.youtube.com/watch?v=1qGPpeVZvdM)  There is a bit of extra information in this video, including the + notation.  It also uses the traditional union symbol instead of the vertical bar, `|`, as your textbook does.  This isn't uncommon as you will see the union operation expressed in several different ways in regular expressions.  I usually use the vertical bar.
+   * [Sprint 1 quiz](./sprint1_quiz.pdf) and [answer key](./sprint1_quiz_ans.pdf)
    
 # Reality Check:
   * On Wednesday 1/29, do previous sprint retrospective and sprint planning meeting.  Skim problem set to give some context for your readings.
