@@ -227,3 +227,80 @@ It should return an `AssignStmt` object you defined previously.
 
 Take another break to compile your program (`javac Driver.java`) and fix any errors that have shown up. Remember to always start with the first error produced by the compiler.
 
+#### Y Programming Language v.0.4 -- While Loops
+## While loops
+The last feature we'll add to our language is the idea of conditional execution.  This also requires some rules for relational operators: `=, >, >=, <, <=, <>` (remember, these are Pascal operators, not Java).
+
+```
+```
+Program --> 'program' NAME ':' Block 'end'
+
+Block --> {Statement}
+
+Statement --> PrintStatement
+              | AssignStatement
+	      | WhileLoop
+
+WhileLoop --> 'while' CondExpr ':' Block 'end'
+
+PrintStatement --> 'print' Expression
+              
+AssignStatement --> Name ':=' Expression
+
+Expression --> AddExpr | StringExpr
+
+StringExpr --> StringLiteral
+
+CondExpr --> AddExpr [('=' | '<' | '<=' | '>' | '>=' | '<>') AddExpr]
+
+AddExpr --> MultExpr [('+' | '-') AddExpr]
+
+MultExpr --> NegExpr [('*' | '/' | '%') MultExpr]
+
+NegExpr --> '-' NegExpr | Atom
+                    
+Atom --> IntegerLiteral
+         | '(' Expression ')'
+         | Name
+```
+
+```
+Note that there's a new kind of expression, `CondExpr`.  Stated simply, this sort of expression would result in a true/false result (although, like C, our language above doesn't have booleans as an `Atom`).  To add support for `CondExpr` we need to do two things:
+1. Add the `CondExpr` class to `Expr.java` (This object will be very similar to `AddExpr` or `MultExpr`.)
+2. Add the `condExpr()` rule method to `Parser.java`.  This will be very similar to the `addExpr()` method but will use different operators.  See `Token.java` for the operator names.
+
+Your parser should now be able to handle simple programs with condition expressions like:
+```
+program CondTest:
+	print 9 < 4
+end
+```
+
+So we now have the `CondExpr` which can be used to determine if the body of the while loop executes or not.  We're now ready to try out the rules for `WhileLoop` in our grammar.  However, we need a special kind of `Block` object in our code: one which stores a condition with it.  This would allow us to test the condition once (in the case of an if statement) or multiple times (in the case of a while loop) before we execute the body of the statement.
+1. Add a `CondBlock` object to `Stmt.java` (similar to `Block` but stores condition with it):
+```
+    static class CondBlock extends Stmt {
+        Block body = null;
+        Expr condition = null;
+        
+        public CondBlock(Expr condition, Block body) {  
+            this.condition = condition;
+    	    this.body = body;
+    	}
+    }
+```
+5. We're now ready to add `whileLoop()` method to `Parser.java` to implement the `WhileLoop` production from our grammar.  Take a look at the `parse()` method which implements the `Program --> 'program' NAME ':' Block 'end'` production rule.  Our `whileLoop()` method will be similar, but will need to return a `CondBlock` instead of just a `Block`.
+
+### Reflect
+Take a minute to pat yourself on the back and reflect on what you've built.  You've implemented a good chunk of what you learned in CMS167, but you're now able to see exactly how we use foundational concepts from formal languages to understand programming languages better.  We have a really good understanding of why programming languages need to be **unambiguous** and how that relates to our grammar being **unambiguous**.  
+
+Obviously, we'd need to add a few more things before we had a full fledged programming language.  Chief among them are subroutines/functions and if statements.  But after seeing while loops, you probably have a good idea what those if statements might look like (but consider, what does an `else` part of an if statement look like?)  Fun for a future day.
+
+### Submission
+At the beginning of `Parser.java` add four things:
+1. The names of everyone who worked on the project
+2. Your honor code statement
+3. Your collaboration statement
+4. An estimate of how many hours you worked on this project.
+
+Then, zip up your `Parser.java`, `Expr.java`, and `Stmt.java` files. Submit you zip file to the assignment on Canvas for this project. 
