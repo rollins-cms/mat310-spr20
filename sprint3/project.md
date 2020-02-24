@@ -1,4 +1,4 @@
-# The Y Programming Language -- Version 0.1
+# Parsing The Y Programming Language
 
 In this project, we'll be writing a parser given the rules of a grammar defining a real programming language.  In this case, the language is based Per Brinch Hansen's *On Pascal Compilers* which describes the TinyBasic language, and Bob Nystrom's Lox language described in the free book *Crafting Interpreters*.
 
@@ -12,8 +12,7 @@ For this project, you should compile the `Driver.java` file and this file kicks 
 So let's take a look at the grammar that the code currently implements.
 
 #### EBNF Grammar
-This is the first version of the language grammar. It allows for
-printing addition expressions using only integer values.
+This is the first version of the language grammar. It allows for printing addition expressions using only integer values.
 
 `' '` denotes a literal token
 `[ ]` denotes 0 or 1 instance of its contents
@@ -42,11 +41,11 @@ program PrintTest:
 end
 ```
 
-You can currently compile and run `Driver`.  In the source code directory is a directory named `tests`.  This `tests` directory has the `PrintTest.y` source code in it which is a syntactically correct program which can be parsed.  `Driver` takes a command line argument with the name of a source code file:
+You can currently compile and run `Driver`.  In the source code directory is a directory named `tests`.  This `tests` directory has the `PrintTest.y` source code in it which is the syntactically correct program above which can be parsed.  `Driver` takes a command line argument with the name of a source code file:
 
 ```
 prompt$  javac Driver.java
-prompt$  java Driver PrintTest.y
+prompt$  java Driver tests/PrintTest.y
 ```
 After you do this, you should see output which indicates your source code (`PrintTest.y`) was free from syntax errors.
 
@@ -71,7 +70,7 @@ This code "consumes" tokens as we parse them and moves us through the `Program -
 
 Now, let's kick it up a notch and add a rule to our grammar for multiplication/division.
 
-# The Y Programming Language -- v 0.2 Adding Multiplication and Division
+# Part 1: The Y Programming Language -- v 0.2 -- Adding Multiplication and Division
 
 Here's an updated grammar for adding multiplication/division statements and expressions:
 
@@ -108,4 +107,123 @@ Steps to make our Parser support new Expr
 Question: **What is the purpose of the classes defined in `Stmt.java` and `Expr.java`?**
 Answer: They are blobs of state that represent nodes in the parse tree. Each class has a set of state variables that represent that 
 important children of that node, as defined in the language grammar.
+
+Once you get the above steps finished, the programs `tests/PrintMult.y` can be parsed with no errors.  Don't proceed until you have `PrintMult.y` passing.
+
+# Part 2: The Y Programming Language -- v. 0.3 -- Negations, Variables, and Assignments, OhMy!
+
+#### Updated EBNF Grammar:
+```
+Program --> 'program' NAME ':' Block 'end'
+
+Block --> {Statement}
+
+Statement --> PrintStatement
+              | AssignStatement
+
+PrintStatement --> 'print' Expression
+              
+AssignStatement --> Name ':=' Expression
+
+Expression --> AddExpr | StringExpr
+
+StringExpr --> StringLiteral
+
+AddExpr --> MultExpr [('+' | '-') AddExpr]
+
+MultExpr --> NegExpr [('*' | '/' | '%') MultExpr]
+
+NegExpr --> '-' NegExpr | Atom
+                    
+Atom --> IntegerLiteral
+         | '(' Expression ')'
+         | Name
+```
+A few things to notice about this version of the grammar:
+* `Statement` now has two choices: `PrintStatement` or `AssignStatement`. An `AssignStatement` is required to begin with a `Name` token.
+* `Name` has also been added as a option for `Atom`: this corresponds to using a variable in an expression.
+* Another new element is `NegExpr` which allows us to negate a value or variable.
+* We also have two new production rules for dealing with the `String` datatype.
+
+## Mod
+Add support for a mod operator. Notice that the updated grammar is:
+
+`MultExpr --> NegExpr [('*' | '/' | '%') MultExpr]`
+
+Take a look at the `multExpr` method in the parser.  This change should be very straightforward.
+
+{Check It!|assessment}(code-output-compare-1708272676)
+
+## Negation Expression
+Another new element of our grammar is `NegExpr`, which now sits between `MultExpr`, which we added last time, and `Atom`. A `NegExpr` implements the unary negation operator. `NegExpr` can be chained, so it's possible to negate a negation. The following example is valid:
+
+```
+program NegationExample:
+    print ---(2 + 2)   { Prints -4 } 
+end
+```
+
+Implementing `NegExpr` required a few changes:
+- Adding a `NegExpr` class to `Expr.java`.
+- Adding a `negExpr` method to the parser. The method has two cases, one where the `NegExpr` begins with a minus symbol and one where it's simply an atom.  Remember that this goes back to the fact that the `NegExpr` production rule in our EBNF grammar has 2 possible expansions.
+
+Take a moment and reflect on how the structure of these changes follows directly from the grammar.
+
+Before you go any further, run the following test and verify your code now supports negation statements.
+
+{Check It!|assessment}(code-output-compare-3332155969)
+
+## Towards Variables
+
+From the perspective of parsing, adding support for variables is pretty straightforward.  Remember that our lexer already determined whether or not the variable's identifier (ie name) is valid.  The parser just has to determined if the sequence where a variable is used is syntactically valid.  After the parser is finished, the compiler/interpretter is actually responsible for updating mappings in a **symbol table** which stores (name, value) pairs for each variable in the program.
+
+To add support for variables:
+1. Create an `AssignStmt` class in `Stmt.java` and a `VarAccess` class in `Expr.java`.
+2. Modify the parser to recognize assignments and variable accesses.
+
+## Adding Classes for Assignment Statements
+An assignment statement has a variable name on the left hand side and an expression on the right-hand side. Like `x = 4;` in Java or `x := 4` in our language.  Add the following to `Stmt.java`:
+
+```
+static class AssignStmt extends Stmt {
+    String name;
+    Expr expr;
+    	
+    public AssignStmt (String name, Expr expr) {
+      this.name = name;
+      this.expr = expr;
+    }
+}
+```
+
+A variable access is described by the name of the variable. Add this to `Expr.java`:
+
+```
+static class VarAccess extends Expr {
+    String name;
+		
+    public VarAccess(String name) {
+      this.name = name;
+    }
+}
+```
+
+Before going on, compile your program and fix any errors using the command `javac Driver.java`
+
+## Modify Parser to Recognize Assignment Statements
+
+
+1. First, add code to recognize assignment statements. Modify the `stmt` method to recognize each kind of statement. Currently, if the code recognizes a `PRINT` token, it knows that the statement is a print statement.  We now add the functionality that if a statement begins with a `NAME` token, it must be an assignment.
+
+2. Next, add the `assignStmt` method which handles the production rule:
+```
+AssignStatement --> Name ':=' Expression
+```
+It should return an `AssignStmt` object you defined previously.
+
+3. The next set of changes need to be made to the `atom` method, to recognize variables used in expressions. We previously checked if an atom was an integer literal or something nested inside parentheses.  Now we need to check for the existence of a `NAME` token which would indicate a variable being used.  This method can now return a `Expr.VarAccess` object made with the `NAME` token's `value` field.
+
+**Compile break!**
+
+Take another break to compile your program (`javac Driver.java`) and fix any errors that have shown up. Remember to always start with the first error produced by the compiler.
 
