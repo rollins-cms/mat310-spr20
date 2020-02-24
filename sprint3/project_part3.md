@@ -310,24 +310,54 @@ To implement this feature:
 
 - Add code to `expr` in the parser to distinguish between `AddExpr` and `StringExpr` (hint: you can check the type of the next token with the `check` method).  Remember that you need to consume the `STRING` token at some point to move past it in your stream of Tokens.
 
-- Add code to `evalExpr` in the interpreter to return the value of a `StringExpr`.  Take a look at the `evalStmt` method if you need a refresher on how to distinguish between different types of `Object`s in your code.
-
 {Check It!|assessment}(code-output-compare-4256923871)
 
 
-## Reflection
+## While loops
+One of the last features we need in our language is the idea of conditional execution.  This also requires the idea of relational operators.
 
-Let's reflect on what you've built: a **complete interpreter** program that can
-  - Take an input source file
-  - Convert it to a stream of tokens using lexical analysis
-  - Parse the token stream into a tree (detecting errors along the way)
-  - Walk over the tree to execute the program
+```
+```
+Program --> 'program' NAME ':' Block 'end'
 
-Your language supports arbitrarily complex integer arithmetic expressions, variables, and dynamic variable declaration.
+WhileLoop --> 'while' AddExpr ('<' | '<=' | '>' | '>=' | '==' | '<>') AddExpr ':' Block 'end'
 
-What other features could we add?
+Block --> {Statement}
 
-Well, to have a Turing complete language we need the ability to conditionally execute blocks of code and perform loops.  Note that support for both of these features also implies support for comparisons using relational operators.
+Statement --> PrintStatement
+              | AssignStatement
+	      | WhileLoop
+
+PrintStatement --> 'print' Expression
+              
+AssignStatement --> Name ':=' Expression
+
+Expression --> AddExpr | StringExpr
+
+StringExpr --> StringLiteral
+
+
+
+AddExpr --> MultExpr [('+' | '-') AddExpr]
+
+MultExpr --> NegExpr [('*' | '/' | '%') MultExpr]
+
+NegExpr --> '-' NegExpr | Atom
+                    
+Atom --> IntegerLiteral
+         | '(' Expression ')'
+         | Name
+```
+
+```
+
+1. Add CondExpr to Expr (very similar to AddExpr)
+2. Add condExpr() rule method to parser
+
+test w/ simple print x > 4 program
+
+3. Add CondBlock to Stmt (similar to Block but stores condition with it)
+4. Add whileLoop production rule method.
 
 
 
