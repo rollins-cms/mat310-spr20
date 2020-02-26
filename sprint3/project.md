@@ -266,11 +266,11 @@ Incorporate the above code into the `expr` method.
 
 Run the test `String.y`
 
-#### Y Programming Language v.0.4 -- While Loops
-## While loops
+#### Part 3 -- Y Programming Language v.0.4 -- While Loops
 The last feature we'll add to our language is the idea of conditional execution.  This also requires some rules for relational operators: `=, >, >=, <, <=, <>` (remember, these are Pascal operators, not Java).
 
-```
+
+## Final Grammar
 ```
 Program --> 'program' NAME ':' Block 'end'
 
@@ -286,7 +286,7 @@ PrintStatement --> 'print' Expression
               
 AssignStatement --> Name ':=' Expression
 
-Expression --> AddExpr | StringExpr
+Expression --> CondExpr | StringExpr
 
 StringExpr --> StringLiteral
 
@@ -303,18 +303,31 @@ Atom --> IntegerLiteral
          | Name
 ```
 
-```
-Note that there's a new kind of expression, `CondExpr`.  Stated simply, this sort of expression would result in a true/false result (although, like C, our language above doesn't have booleans as an `Atom`).  To add support for `CondExpr` we need to do two things:
+A few things to notice:
+* We now have a conditional expression production rule which uses relational operators to compare a left and (optional) right side.
+* We have a new production rule for while loops which begin with teh keyword "while" followed by a conditional expression, a colon, and a block of statements which ends with the keyword "end".
+* We've added the while loop to our statement production rule (since while loops are statements)
+* The expression prodcution rule has changed to be either a conditional statement or an atom (the previous version was an addition expression or an atom)
+
+
+## Conditional Expression
+First, we need to modify our language to account for expressions like `x < 6` or `x + 4 < 10`.
+
+Note that there's a new kind of expression, `CondExpr`.  Stated simply, this sort of expression would result in a true/false result (although, like C, our language above doesn't have a formal booleans datatype).  To add support for `CondExpr` we need to do two things:
 1. Add the `CondExpr` class to `Expr.java` (This object will be very similar to `AddExpr` or `MultExpr`.)
 2. Add the `condExpr()` rule method to `Parser.java`.  This will be very similar to the `addExpr()` method but will use different operators.  See `Token.java` for the operator names.
+3. Modify the `expr()` method to use a `CondExpr` instead of an `AddExpr` as in our last version of the grammar.
 
 Your parser should now be able to handle simple programs with condition expressions like:
 ```
-program CondTest:
+program Conditional:
 	print 9 < 4
 end
 ```
 
+Run test test `Conditional.y`.  You may want to change this test a few times to check that all 6 relational operators are working.
+
+## Combining a conditional expression with a block of code
 So we now have the `CondExpr` which can be used to determine if the body of the while loop executes or not.  We're now ready to try out the rules for `WhileLoop` in our grammar.  However, we need a special kind of `Block` object in our code: one which stores a condition with it.  This would allow us to test the condition once (in the case of an if statement) or multiple times (in the case of a while loop) before we execute the body of the statement.
 1. Add a `CondBlock` object to `Stmt.java` (similar to `Block` but stores condition with it):
 ```
@@ -328,14 +341,15 @@ So we now have the `CondExpr` which can be used to determine if the body of the 
     	}
     }
 ```
-5. We're now ready to add `whileLoop()` method to `Parser.java` to implement the `WhileLoop` production from our grammar.  Take a look at the `parse()` method which implements the `Program --> 'program' NAME ':' Block 'end'` production rule.  Our `whileLoop()` method will be similar, but will need to return a `CondBlock` instead of just a `Block`.
+2. We're now ready to add `whileLoop()` method to `Parser.java` to implement the `WhileLoop` production from our grammar.  Take a look at the `parse()` method which implements the `Program --> 'program' NAME ':' Block 'end'` production rule.  Our `whileLoop()` method will be similar, but will need to return a `CondBlock` instead of just a `Block`.
+3. Modify the `stmt()` method to call the `whileLoop()` method if it sees a `WHILE` token.  `stmt` should now account for the three different types of statements: print, assignment, and while loop.
 
-### Reflect
-Take a minute to pat yourself on the back and reflect on what you've built.  You've implemented a good chunk of what you learned in CMS167, but you're now able to see exactly how we use foundational concepts from formal languages to understand programming languages better.  We have a really good understanding of why programming languages need to be **unambiguous** and how that relates to our grammar being **unambiguous**.  
+## Reflect
+Take a minute to pat yourself on the back and reflect on what you've built.  Using a formal grammar, you've implemented a good chunk of a compiler!  You're now able to see exactly how we use foundational concepts from formal languages to understand programming languages better.  You have a really good understanding of why programming languages need to be **unambiguous** and how that relates to our grammar.  
 
-Obviously, we'd need to add a few more things before we had a full fledged programming language.  Chief among them are subroutines/functions and if statements.  But after seeing while loops, you probably have a good idea what those if statements might look like (but consider, what does an `else` part of an if statement look like?)  Fun for a future day.
+Obviously, we'd need to add a few more things before we had a full fledged (Turing complete) programming language.  Chief among them are subroutines/functions and if statements.  But after seeing while loops, you probably have a good idea what those if statements might look like.  But consider, what does an `else` part of an if statement look like? Fun for a future day.
 
-### Submission
+## Submission
 At the beginning of `Parser.java` add four things:
 1. The names of everyone who worked on the project
 2. Your honor code statement
