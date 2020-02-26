@@ -40,7 +40,7 @@ I may add to these as we go through the sprint.  Use the [Expert Request](https:
   * [Concise Overview of CFGs and Parse Trees](https://brilliant.org/wiki/context-free-grammars/)
   * [Practice parsing problems](./cfg-problems.pdf)
   * [Practice lexical analysis problems](./la-problem.pdf)
-  * [Practice quiz](./practice_quiz.pdf)
+  * [Practice quiz](./practice_quiz.pdf) and [answer key](./practice_quiz_ans.pdf)
   * Three videos on Canvas (overview of Grammars, introduction to compilers/project, lexical analysis)
   
 # Reality Check:
