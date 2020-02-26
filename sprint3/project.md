@@ -9,7 +9,7 @@ end
 ```
 
 
-As we discussed, the first step is taking a string of characters (the source code) and turning it into a series of symbols or **tokens**.  This process is called **lexical analysis** or just "lexing."  After we have a sequences of tokens, we have to parse those tokens to see if we have a syntactially correct program.  Once we know the **parse tree**, we can do a **tree-walk** to execute the program in an **interpreter**.  You'll be implementing parts of a parser. (The lexer and interpreter are already written for you.) By the end, we won't have a full-fledged programming language, but hopefully you'll see how you could extend this project to get there.
+As we discussed, the first step is taking a string of characters (the source code) and turning it into a series of symbols or **tokens**.  This process is called **lexical analysis** or just "lexing."  After we have a sequences of tokens, we have to parse those tokens to see if we have a syntactially correct program.  Once we know the **parse tree**, we can do a **tree-walk** to execute the program in an **interpreter**.  You'll be implementing parts of a parser. (The lexer and interpreter are already written for you, but you'll have to uncomment some sections of the interpreter.) By the end, we won't have a full-fledged programming language, but hopefully you'll see how you could extend this project to get there.
 
 ## Getting Started
 Download the source code zip file and extract it.  You can compile and run this program any way you choose: the command line, an IDE like Eclipse or IntelliJ, or an online IDE like Mimir or Codio (if you have access to one).
