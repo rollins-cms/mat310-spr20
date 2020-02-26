@@ -289,6 +289,7 @@ InterpreterPart2 interpreter = new InterpreterPart2(program);
 Then recompile and:
 * Run `Negation.y` test and verify your code now supports negation statements.
 * Run `Assignment.y and Reassignment.y` to check variable support as well as assignment statements
+* Run `Arithmetic.y` which includes arithmetic calculations as the values assigned to variables
 * Run the test `Strings.y` to test string datatypes
 
 You can (and should) change some of these `.y` programs to test your implementation.
