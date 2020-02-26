@@ -179,15 +179,14 @@ Atom --> IntegerLiteral
          | NAME
 ```
 A few things to notice about this version of the grammar:
-1. `Statement` now has two choices: `PrintStatement` or `AssignStatement`. An `AssignStatement` is required to begin with a `NAME` token.  (The `NAME` token is an identifier -- e.g. program name, method name, or variable name.)
+1. `Statement` now has two choices: `PrintStatement` or `AssignStatement`. After this rule, we'll be able to have statements like `x := 4`.  An `AssignStatement` is required to begin with a `NAME` token and use the assignment operator, `:=`.  (The `NAME` token is an identifier -- e.g. program name, method name, or variable name.)  After this rule, we'll be able to have statements like `x := 4`
 2. `NAME` has also been added as a option for `Atom` -- this corresponds to using a variable in an expression like `x+4` instead of having only literal integer values like `3+4`
 3. Another new element is `NegExpr` which allows us to negate a value or variable.
-4. The `MultExpr` rule has been expanded to allow for the modulo functionality.
-5. We also have a new production rule for dealing with the `String` datatype, and the `Expr` production rule has also changed to accommodate this new datatype.
+4. We also have a new production rule for dealing with the `String` datatype, and the `Expr` production rule has also changed to accommodate this new datatype.
 
 
 ## Negation Expression
-Another new element of our grammar is `NegExpr`, which now sits between `MultExpr`, which we added last time, and `Atom`. A `NegExpr` implements the unary negation operator. `NegExpr` can be chained, so it's possible to negate a negation. The following example is valid:
+A new element of our grammar is `NegExpr`, which now sits between `MultExpr`, which we added last time, and `Atom`. A `NegExpr` implements the unary negation operator. `NegExpr` can be chained, so it's possible to negate a negation. The following example is valid:
 
 ```
 program Negation:
@@ -196,7 +195,7 @@ end
 ```
 
 Implementing `NegExpr` requires a few changes:
-- Adding a `NegExpr` class to `Expr.java`:
+1. Adding a `NegExpr` class to `Expr.java`:
 ```
     static class NegExpr extends Expr {
         Expr expr;
@@ -209,11 +208,16 @@ Implementing `NegExpr` requires a few changes:
     }
  ```
 
-- Adding a `negExpr` method to `Parser.java`. The method has two cases, one where the `NegExpr` begins with a minus symbol and one where it's simply an atom.  We have to check our stream of tokens to see if the next token is `MINUS`.  If it is, then we use the `NegExpr --> '-' NegExpr` rule.  Otherwise, we use the `NegExpr --> Atom` rule.  Don't forget to "consume" the `MINUS` token after we've created a new `Expr.NegExpr` object.  Remember that all this goes back to the fact that the `NegExpr` production rule in our EBNF grammar has 2 possible expansions.
+2. Adding a `negExpr()` method to `Parser.java`. The method has two cases, one where the `NegExpr` begins with a minus symbol and one where it's simply an atom.  We have to check our stream of tokens to see if the next token is `MINUS`.  If it is, then we use the `NegExpr --> '-' NegExpr` rule.  Otherwise, we use the `NegExpr --> Atom` rule.  Don't forget to "consume" the `MINUS` token and return a new `Expr.NegExpr` object.  Remember that all this goes back to the fact that the `NegExpr` production rule in our EBNF grammar has 2 possible expansions.
+3. Modifying our `multExpr()` method in Parser.java since the `MultExpr` production rule has changed.  This method will now need to call the `negExpr()` method you wrote in step 2 for the left hand side expression.
 
 Take a moment and reflect on how the structure of these changes follows directly from the grammar.
 
-Before you go any further, run the following `Negation.y` test and verify your code now supports negation statements.
+Make sure your code compiles:
+```
+javac Driver.java
+```
+before moving on.
 
 ## Towards Variables
 
@@ -224,13 +228,13 @@ An assignment statement has a variable name on the left hand side and an express
 
 ```
 static class AssignStmt extends Stmt {
-    String name;
-    Expr expr;
+	String name;
+    	Expr expr;
     	
-    public AssignStmt (String name, Expr expr) {
-      this.name = name;
-      this.expr = expr;
-    }
+    	public AssignStmt (String name, Expr expr) {
+      		this.name = name;
+      		this.expr = expr;
+    	}
 }
 ```
 
@@ -238,49 +242,56 @@ A variable access is described by the name of the variable. Add this to `Expr.ja
 
 ```
 static class VarAccess extends Expr {
-    String name;
+	String name;
 		
-    public VarAccess(String name) {
-      this.name = name;
-    }
+	public VarAccess(String name) {
+      		this.name = name;
+    	}
 }
 ```
 
 Before going on, compile your program and fix any errors using the command `javac Driver.java`
 
 ## Modify Parser to Recognize Assignment Statements
-
-1. First, add code to recognize assignment statements. Modify the `stmt` method to recognize each kind of statement. Currently, if the code recognizes a `PRINT` token, it knows that the statement is a print statement.  We now add the functionality that if a statement begins with a `NAME` token, it must be an assignment.
-
-2. Next, add the `assignStmt` method which handles the production rule:
+1. Add the `assignStmt` method to `Parser.java` which handles the production rule:
 ```
 AssignStatement --> Name ':=' Expression
 ```
-It should return an `AssignStmt` object you defined previously.
+It should return an `Stmt.AssignStmt` object you defined previously.
 
-3. The next set of changes need to be made to the `atom` method, to recognize variables used in expressions. We previously checked if an atom was an integer literal or something nested inside parentheses.  Now we need to check for the existence of a `NAME` token which would indicate a variable being used.  This method can now return a `Expr.VarAccess` object made with the `NAME` token's `value` field.
+2. Now, add code to recognize assignment statements. Modify the `stmt` method in `Parser.java` to recognize each kind of statement. Currently, if the code recognizes a `PRINT` token, it knows that the statement is a print statement.  We now add the functionality that if a statement begins with a `NAME` token, it must be an assignment.  It's a good idea to do a quick compile here to make sure you have correctly matched the types before proceeding.
 
-**Compile break!**
+3. The next set of changes need to be made to the `atom` method, to recognize variables used in expressions. We previously checked if an atom was an integer literal or something nested inside parentheses.  Now we need to check for the existence of a `NAME` token which would indicate a variable being used.  This method can now return a `Expr.VarAccess` object made with the `NAME` token's `value` field.  Don't forget to consume the `NAME` token **after** you've extracted the value.
 
 Take another break to compile your program (`javac Driver.java`) and fix any errors that have shown up. Remember to always start with the first error produced by the compiler.
-
-Run the tests `Assignment.y and Reassignment.y`
 
 ## Strings
 Now we want to add a new data type to our langauge.  So far, we've just had integers, but now we want to have Strings.
 
 1. We need to add a `StringExpr` class to the `Expr.java` file.  Look at the `IntegerExpr` class and copy/paste it.  Change it's name to `StringExpr` and then figure out how to change it so that it stores a String rather than an Integer value.
-2. Now we have to take into account that the `Expression` production rule now has two possible expansions: `Expression --> AddExpr | StringExpr`.  Modify the `expr()` method in `Parser.java` to check to see if hte next token is a `STRING` token.  If it is, we need to get the value of that token, consume the `STRING` token, and create a new `StringExpr` from the value:
+2. Now we have to take into account that the `Expression` production rule now has two possible expansions: `Expression --> AddExpr | StringExpr`.  Modify the `expr()` method in `Parser.java` to check to see if the next token is a `STRING` token.  If it is, we need to get the value of that token, consume the `STRING` token, and create a new `StringExpr` from the value:
 ```
 if (check(Tokens.STRING)) {
    String s = (String) currentToken().value;
    consume(Tokens.STRING);
-   return new Expr.StringExpr(lit);
+   return new Expr.StringExpr(s);
 }
 ```
 Incorporate the above code into the `expr` method.  
 
-Run the test `String.y`
+## Tests
+Let's check our work:
+
+First, we need to update our interpreter to match are new grammar.  Change the interpreter in `Driver.java` to be:
+```
+InterpreterPart2 interpreter = new InterpreterPart2(program);
+```
+Then recompile and:
+* Run `Negation.y` test and verify your code now supports negation statements.
+* Run `Assignment.y and Reassignment.y` to check variable support as well as assignment statements
+* Run the test `Strings.y` to test string datatypes
+
+You can (and should) change some of these `.y` programs to test your implementation.
 
 #### Part 3 -- Y Programming Language v.0.4 -- While Loops
 The last feature we'll add to our language is the idea of conditional execution.  This also requires some rules for relational operators: `=, >, >=, <, <=, <>` (remember, these are Pascal operators, not Java).
