@@ -30,7 +30,7 @@ It turns out that context-free grammars are highly relevant to the process of tu
 
 ## Team Requirements:
    * Maintain a Trello board and track your sprint backlog along with time estimates.
-   * There is a significant coding project for this sprint.  You may work in either paris or triads.  Thus, if you're currently in a group of 4, you can split into 2 pairs.  If you are currently in a team of 3, you can work as a triad.  It will be useful to arrange your pairings in such a way that there are strong coders and strong mathematicians working on the project together; a diverse team is a strength!
+   * There is a significant [coding project](./project.md) for this sprint.  You may work in either paris or triads.  Thus, if you're currently in a group of 4, you can split into 2 pairs.  If you are currently in a team of 3, you can work as a triad.  It will be useful to arrange your pairings in such a way that there are strong coders and strong mathematicians working on the project together; a diverse team is a strength!
    
 # Resources:  
 I may add to these as we go through the sprint.  Use the [Expert Request](https://rollins.co1.qualtrics.com/jfe/form/SV_0jNfbBpN1clDJfn?course=mat310s20&sprint=3) for more resources. 
@@ -39,13 +39,14 @@ I may add to these as we go through the sprint.  Use the [Expert Request](https:
       * IToC: 2.1 (especially subsection on ambiguity, pgs. 105-106 in 2nd ed.)
   * [Concise Overview of CFGs and Parse Trees](https://brilliant.org/wiki/context-free-grammars/)
   * [Practice parsing problems](./cfg-problems.pdf)
+  * [Practice lexical analysis problems](./la-problem.pdf)
   * [Practice quiz](./practice_quiz.pdf)
   
 # Reality Check:
   * On Wednesday, after quiz: Do Sprint 2 retrospective. Do basic team setup.  Do sprint planning meeting.  Decide on project groupings (pair or triad)
   * TODO by next class:  Watch the video about grammars and the overview of the projects.  Download starter code and get it compiling.  Read about parse trees and try one or two of the practice parse tree problems.
   * Monday class: Mini-lecture on coding the parsing process using left-derivation.  Start working on understanding code and perhaps start Part 1.
-  * TODO by next class: Finish Part 1 of project, watch video on lexical analysis.
+  * TODO by next class: Finish Part 1 of project.  Watch video on lexical analysis and try one of the practice problems.
   * Wednesday: Continue working on project.
   * TODO by Monday: Continue working on project.  Finish Part 2 and at least read over Part 3.
   * Monday: Continue working on project.  Hopefully be finished or close to it.
