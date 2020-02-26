@@ -151,7 +151,7 @@ After you've added this functionality, make sure the `Mod.y` program compiles/pa
 
 Now we're going add more things: negation statements, variables, Strings, and assignment statements.
 
-#### Updated EBNF Grammar:
+### Updated EBNF Grammar:
 ```
 Program --> 'program' NAME ':' Block 'end'
 
@@ -185,7 +185,7 @@ A few things to notice about this version of the grammar:
 4. We also have a new production rule for dealing with the `String` datatype, and the `Expr` production rule has also changed to accommodate this new datatype.
 
 
-## Negation Expression
+### Negation Expression
 A new element of our grammar is `NegExpr`, which now sits between `MultExpr`, which we added last time, and `Atom`. A `NegExpr` implements the unary negation operator. `NegExpr` can be chained, so it's possible to negate a negation. The following example is valid:
 
 ```
@@ -219,11 +219,11 @@ javac Driver.java
 ```
 before moving on.
 
-## Towards Variables
+### Towards Variables
 
 From the perspective of parsing, adding support for variables is pretty straightforward.  Remember that our lexer already determined whether or not the variable's identifier (ie name) is valid.  The parser just has to determine if the sequence where a variable's name is used is syntactically valid.  After the parser is finished, the compiler/interpretter is actually responsible for updating mappings in a **symbol table** which stores (name, value) pairs for each variable in the program.
 
-## Adding Classes for Assignment Statements
+### Adding Classes for Assignment Statements
 An assignment statement has a variable name on the left hand side and an expression on the right-hand side. Like `x = 4;` in Java or `x := 4` in our language.  Add the following to `Stmt.java`:
 
 ```
@@ -252,7 +252,7 @@ static class VarAccess extends Expr {
 
 Before going on, compile your program and fix any errors using the command `javac Driver.java`
 
-## Modify Parser to Recognize Assignment Statements
+### Modify Parser to Recognize Assignment Statements
 1. Add the `assignStmt` method to `Parser.java` which handles the production rule:
 ```
 AssignStatement --> Name ':=' Expression
@@ -265,7 +265,7 @@ It should return an `Stmt.AssignStmt` object you defined previously.
 
 Take another break to compile your program (`javac Driver.java`) and fix any errors that have shown up. Remember to always start with the first error produced by the compiler.
 
-## Strings
+### Strings
 Now we want to add a new data type to our langauge.  So far, we've just had integers, but now we want to have Strings.
 
 1. We need to add a `StringExpr` class to the `Expr.java` file.  Look at the `IntegerExpr` class and copy/paste it.  Change it's name to `StringExpr` and then figure out how to change it so that it stores a String rather than an Integer value.
@@ -279,7 +279,7 @@ if (check(Tokens.STRING)) {
 ```
 Incorporate the above code into the `expr` method.  
 
-## Tests
+### Testing Part 2
 Let's check our work:
 
 First, we need to update our interpreter to match are new grammar.  Change the interpreter in `Driver.java` to be:
@@ -293,11 +293,11 @@ Then recompile and:
 
 You can (and should) change some of these `.y` programs to test your implementation.
 
-#### Part 3 -- Y Programming Language v.0.4 -- While Loops
+## Part 3 -- Y Programming Language v.0.4 -- While Loops
 The last feature we'll add to our language is the idea of conditional execution.  This also requires some rules for relational operators: `=, >, >=, <, <=, <>` (remember, these are Pascal operators, not Java).
 
 
-## Final Grammar
+### Final Grammar
 ```
 Program --> 'program' NAME ':' Block 'end'
 
@@ -331,30 +331,28 @@ Atom --> IntegerLiteral
 ```
 
 A few things to notice:
-* We now have a conditional expression production rule which uses relational operators to compare a left and (optional) right side.
+* We now have a conditional expression production rule which uses relational operators to compare a left and (optional) right side.  This allows us to have expressions like `x <= 4` for example.
 * We have a new production rule for while loops which begin with teh keyword "while" followed by a conditional expression, a colon, and a block of statements which ends with the keyword "end".
-* We've added the while loop to our statement production rule (since while loops are statements)
+* We've added the while loop to our statement production rule (since an entire while loop is a statements).
 * The expression prodcution rule has changed to be either a conditional statement or an atom (the previous version was an addition expression or an atom)
 
 
-## Conditional Expression
+### Conditional Expression
 First, we need to modify our language to account for expressions like `x < 6` or `x + 4 < 10`.
 
 Note that there's a new kind of expression, `CondExpr`.  Stated simply, this sort of expression would result in a true/false result (although, like C, our language above doesn't have a formal booleans datatype).  To add support for `CondExpr` we need to do two things:
-1. Add the `CondExpr` class to `Expr.java` (This object will be very similar to `AddExpr` or `MultExpr`.)
+1. Add the `CondExpr` class to `Expr.java` (This object will be very similar to `AddExpr` or `MultExpr` so copy one of those and modify it.)
 2. Add the `condExpr()` rule method to `Parser.java`.  This will be very similar to the `addExpr()` method but will use different operators.  See `Token.java` for the operator names.
 3. Modify the `expr()` method to use a `CondExpr` instead of an `AddExpr` as in our last version of the grammar.
 
-Your parser should now be able to handle simple programs with condition expressions like:
+Your parser will now be able to handle simple programs with condition expressions like:
 ```
 program Conditional:
 	print 9 < 4
 end
 ```
 
-Run test test `Conditional.y`.  You may want to change this test a few times to check that all 6 relational operators are working.
-
-## Combining a conditional expression with a block of code
+### Combining a conditional expression with a block of code
 So we now have the `CondExpr` which can be used to determine if the body of the while loop executes or not.  We're now ready to try out the rules for `WhileLoop` in our grammar.  However, we need a special kind of `Block` object in our code: one which stores a condition with it.  This would allow us to test the condition once (in the case of an if statement) or multiple times (in the case of a while loop) before we execute the body of the statement.
 1. Add a `CondBlock` object to `Stmt.java` (similar to `Block` but stores condition with it):
 ```
@@ -371,8 +369,15 @@ So we now have the `CondExpr` which can be used to determine if the body of the 
 2. We're now ready to add `whileLoop()` method to `Parser.java` to implement the `WhileLoop` production from our grammar.  Take a look at the `parse()` method which implements the `Program --> 'program' NAME ':' Block 'end'` production rule.  Our `whileLoop()` method will be similar, but will need to return a `CondBlock` instead of just a `Block`.
 3. Modify the `stmt()` method to call the `whileLoop()` method if it sees a `WHILE` token.  `stmt` should now account for the three different types of statements: print, assignment, and while loop.
 
+### Testing Part 3
+Just as in previous parts, we need to make our interpreter match our new Grammar, so update the Driver to use `InterpreterPart3`.
+
+Then:
+* Run the test `Conditional.y`.  You may want to change this test a few times to check that all 6 relational operators are working
+* Run the test `While.y`.  You can modify this program to change the execution (or lack thereof) of the body of the while loop.
+
 ## Reflect
-Take a minute to pat yourself on the back and reflect on what you've built.  Using a formal grammar, you've implemented a good chunk of a compiler!  You're now able to see exactly how we use foundational concepts from formal languages to understand programming languages better.  You have a really good understanding of why programming languages need to be **unambiguous** and how that relates to our grammar.  
+Take a minute to pat yourself on the back and reflect on what you've built.  Using a formal grammar, you've implemented a good chunk of a compiler!  Specifically, a **top-down, recursive** parser.  You're now able to see exactly how we use foundational concepts from formal languages to implement programming languages and useful tools (like compilers!) better.  You have a really good understanding of why programming languages need to be **unambiguous** and how that relates to our grammar.  You might also have a better appreciation of [Admiral Grace Hopper's](https://history-computer.com/ModernComputer/Software/FirstCompiler.html) work on the very first compiler and why we consider that development such a watershed moment in computer science!  It's worth noting that she was a formally trained mathematician.
 
 Obviously, we'd need to add a few more things before we had a full fledged (Turing complete) programming language.  Chief among them are subroutines/functions and if statements.  But after seeing while loops, you probably have a good idea what those if statements might look like.  But consider, what does an `else` part of an if statement look like? Fun for a future day.
 
