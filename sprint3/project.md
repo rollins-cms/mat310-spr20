@@ -82,7 +82,7 @@ Continue tracing the code into the `block` method where we see that a block of c
 
 Now, let's kick it up a notch and add a rule to our grammar for multiplication/division.
 
-## Part 1: The Y Programming Language -- v 0.2 -- Adding Multiplication and Division
+## Part 1: The Y Programming Language -- v 0.2 -- Adding Multiplication, Division and Modulo
 
 Here's an updated grammar for adding multiplication/division statements and expressions:
 
@@ -108,20 +108,43 @@ Atom --> IntegerLiteral | '(' Expr ')'
 
 Note changes from v.1 to v.2!
 * `AddExpr` production changed
-* `MultExpr` added (very similar to old `AddExpr`)
+* `MultExpr` production added (very similar to old `AddExpr`)
 
 Steps to make our Parser support new `MultExpr`:
 1. Add an `MultExpr` class in the `Expr.java` file.  You can closely match the existing `AddExpr` class.
-2. Add a `multExpr()` method to the parser.
+2. Add a `multExpr()` method to the parser.  Look at the existing `addExpr()` for reference and change the function calls to match the modified grammar. 
 3. Modify the `addExpr` method to make the left part a `MultExpr` instead of an `Atom` as it was in v.1.
-4. Compile and test with the `PrintMult.y` test in the `tests` directory.
 
 Question: **What is the purpose of the classes defined in `Stmt.java` and `Expr.java`?**
 
 Answer: They are blobs of state that represent nodes in the parse tree. Each class has a set of state variables that represent that 
 important children of that node, as defined in the language grammar.
 
-Once you get the above steps finished, the programs `tests/PrintMult.y` can be parsed with no errors.  Don't proceed until you have `PrintMult.y` parsing and giving the correct output.
+
+
+Once you get the above steps finished, open `Driver.java` and change the line which says:
+```
+InterpreterInitial interpreter = new InterpreterInitial();
+```
+to
+```
+InterpreterPart1 interpreter = new InterpreterPart1();
+```
+This gives us a new interpreter which matches our new grammar.
+
+Now try your parser with the program `tests/Mult.y` as it can be parsed with no errors.  Don't proceed until you have `PrintMult.y` parsing and giving the correct output.
+
+#### Mod
+Now, let's add support for a mod operator. We can easily do this in our `MultExpr` rule, and the updated production would be:
+
+```
+MultExpr --> Atom [('*' | '/' | '%') MultExpr]
+```
+
+Take a look at the `multExpr` method in the parser.  How would you change it to correctly parse the modulo operator?  This change should be very straightforward.
+
+After you've added this functionality, make sure the `Mod.y` program compiles/parses correctly and gives the expected output.
+
 
 ## Part 2: The Y Programming Language -- v. 0.3 -- Negations, Variables, and Assignments, OhMy!
 
@@ -157,18 +180,10 @@ Atom --> IntegerLiteral
 A few things to notice about this version of the grammar:
 1. `Statement` now has two choices: `PrintStatement` or `AssignStatement`. An `AssignStatement` is required to begin with a `NAME` token.  (The `NAME` token is an identifier -- e.g. program name, method name, or variable name.)
 2. `NAME` has also been added as a option for `Atom` -- this corresponds to using a variable in an expression like `x+4` instead of having only literal integer values like `3+4`
-3. Another new element is `NegExpr` which allows us to negate a value or variable.\
+3. Another new element is `NegExpr` which allows us to negate a value or variable.
 4. The `MultExpr` rule has been expanded to allow for the modulo functionality.
 5. We also have a new production rule for dealing with the `String` datatype, and the `Expr` production rule has also changed to accommodate this new datatype.
 
-### Mod
-Add support for a mod operator. Notice that the updated grammar is:
-
-`MultExpr --> NegExpr [('*' | '/' | '%') MultExpr]`
-
-Take a look at the `multExpr` method in the parser.  This change should be very straightforward.
-
-After you've added this functionality, make sure the `Mod.y` program compiles/parses correctly and gives the expected output.
 
 ## Negation Expression
 Another new element of our grammar is `NegExpr`, which now sits between `MultExpr`, which we added last time, and `Atom`. A `NegExpr` implements the unary negation operator. `NegExpr` can be chained, so it's possible to negate a negation. The following example is valid:
