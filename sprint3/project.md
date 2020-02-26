@@ -21,9 +21,10 @@ So let's take a look at the grammar that the code currently implements.
 #### EBNF Grammar
 This is the first version of the language grammar. It allows for printing addition expressions using only integer values.
 
-`' '` denotes a literal token
-`[ ]` denotes 0 or 1 instance of its contents
-`{ }` denotes 0 or more instances of its contents
+Some notes about the EBNF format:
+* `' '` denotes a literal token
+* `[ ]` denotes 0 or 1 instance of its contents
+* `{ }` denotes 0 or more instances of its contents
 
 ```
 Program --> 'program' NAME ':' Block 'end'
