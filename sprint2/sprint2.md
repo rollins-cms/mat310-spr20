@@ -41,6 +41,7 @@ I may add to these as we go through the sprint.  Use the [Expert Request](https:
 * There are two videos posted on Canvas (in the Pages section) that I recorded showing the NFA to DFA conversion algorithm.  This is a crucial step to understanding the equivalence of NFAs and DFAs.
 * [Pumping Lemma Video](https://www.youtube.com/watch?v=g4e2RElzCSQ) (YouTube, 30min) Quite possibly the most accessible explanation of the pumping lemma I've seen.
 * [Practice quiz](./sprint2_practice_quiz.pdf) and [answer key](./sprint2_practice_quiz_ans.pdf)
+* [Quiz](./sprint2_quiz.pdf) and [answer key](./sprint2_quiz_ans.pdf)
    
 # Reality Check:
   * On Wednesday, after the Sprint 1 quiz, do the Sprint 1 retrospective.  Do sprint planning meeting (generate sprint backlog and time estimations).  Skim the problem set.
