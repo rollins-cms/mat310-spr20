@@ -1,5 +1,7 @@
-# Exercise 1
-This exercise begins with a lab-like portion which walks you through a TM in JFLAP.  Then you have to answer some questions about it on your own.
+# Exercise 1 
+*based on a exercise originally by Jay Bagga*
+
+This exercise is very lab-like portion and walks you through a TM in JFLAP.  Then you have to answer some questions about it on your own.
 
 ## Introduction
 A Turing Machine (TM) is a powerful model which represents a general purpose computer.
@@ -52,33 +54,33 @@ process, taking a path toward q3 if a b is read. If all the a's and b's are matc
 returns to q0, it then moves right through the q7 and reads only x’s to reach the accept state.
 You will now simulate this TM in JFLAP and test it for several inputs.
 
-## Part 1
+## Running a single input
 Load the TM in the file exercise1.jff if you haven't already done so. 
 
-1A. Study the path `q0 --> q1 --> q2 --> q5 --> q6 --> q0` and the transitions along this path.
+Part A. Study the path `q0 --> q1 --> q2 --> q5 --> q6 --> q0` and the transitions along this path.
 Explain the actions of the TM along this path.
 
-1B. Repeat the above step for the path `q0 --> q3 --> q4 --> q5 --> q6 --> q0`.  Again, explain the actions of the TM along this path.
+Part B. Repeat the above step for the path `q0 --> q3 --> q4 --> q5 --> q6 --> q0`.  Again, explain the actions of the TM along this path.
 
-1C. Choose Input from the menu and click on Step... Enter the input `abb$abb` and click
+Part C. Choose Input from the menu and click on Step... Enter the input `abb$abb` and click
 OK. At this stage the initial
 state q0 is highlighted. In the lower left corner, you see the current state, the tape and
 the current cell highlighted in orange.
 
 Click on the button Step in the lower left corner. Describe the changes you see on the
 tape and the current state. Explain those changes. Continue to step through until the
-state in again at q0. Compare this with you answer in Question 1A. above. 
+state in again at q0. Compare this with you answer in Part A above. 
 
-1D. Continue to step through until you see the state q8 highlighted and the lower left
+Part D. Continue to step through until you see the state q8 highlighted and the lower left
 portion of the window is green. Is the input accepted?
  
-1E. Repeat the above steps with a new input: `abb$aba`. Is this
+Part E. Repeat the above steps with a new input: `abb$aba`. Is this
 input accepted? Why or why not? What happens after the TM reaches q4?
 
-## Part 2 - Simulating multiple inputs
-Close the simulation you ran in Part 1.  If you accidentally close the entire TM, just reload it from the exercise1.jff file.
+## Simulating multiple inputs
+Close the simulation you ran in previously.  If you accidentally close the entire TM, just reload it from the exercise1.jff file.
 
-2A. Choose Input in the menu and click on Multiple Run. Enter
+Part F. Choose Input in the menu and click on Multiple Run. Enter
 inputs as shown in the table below and run the multiple inputs. Explain why each input is accepted or rejected.
 
 | Input |
@@ -91,16 +93,8 @@ inputs as shown in the table below and run the multiple inputs. Explain why each
 | $$$$ |
 | $ |
 
-2B. Enter four more different inputs, two of which should be accepted and two rejected.
+Part G. Enter four more different inputs, two of which should be accepted and two rejected.
 
-2C. If q7 is also made an accept state, how would it change the language of words that are
+Part H. If q7 is also made an accept state, how would it change the language of words that are
 accepted by the modified TM? Explain your answer. Test your answer with several
 inputs in JFLAP.
-
-
-
-
-
-
-
-
