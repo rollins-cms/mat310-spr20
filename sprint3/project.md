@@ -284,7 +284,7 @@ Let's check our work:
 
 First, we need to update our interpreter to match are new grammar.  Change the interpreter in `Driver.java` to be:
 ```
-InterpreterPart2 interpreter = new InterpreterPart2(program);
+InterpreterPart2 interpreter = new InterpreterPart2();
 ```
 Then recompile and:
 * Run `Negation.y` test and verify your code now supports negation statements.
