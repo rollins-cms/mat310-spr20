@@ -31,7 +31,7 @@ position left:
 δ(q1, 0) = (qf, □, L)
 δ(q1, 1) = (qf, □, L)
 ```
-Use JFLAP to construct the machine and determine it's mathematical purpose.  You will need to think about the quantity represented by the input and the eventual result.  It's not enough to just describe how the string is transformed.
+    Use JFLAP to construct the machine and determine it's mathematical purpose.  You will need to think about the quantity represented by the input and the eventual result.  It's not enough to just describe how the string is transformed.
 
 
 4.  Consider the following intuitive description of a TM which takes an input of a bit string, adds 1 to the input and writes the computation as a result on the tape:
