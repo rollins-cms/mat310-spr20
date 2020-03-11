@@ -7,7 +7,7 @@
 * Requirements due: Wed. Apr. 1 at the beginning of class.
 
 # Rationale:
-When we studied DFAs and NFAs, we saw that the lack of "memory" prevented us from being able to work with certain languages.  Then we took a step farther and saw that CFGs could handle still more languages.  We've now come to Turing Machines.  Turing Machines introduce a bi-directional tape which serves as both input and output.  It's a really simple little machine, but as we'll see, it's amazingly powerful -- equivalent to modern computers.  There's a reason why Alan Turing is referred to as the "Father of Computer Science" and his paper on these machines is why.
+When we studied DFAs and NFAs, we saw that the lack of "memory" prevented us from being able to work with certain languages.  Then we took a step farther and saw that CFGs could handle still more languages.  We've now come to Turing Machines.  Turing Machines introduce a bi-directional tape which serves as both input and output.  It's a really simple little machine, but as we'll see, it's amazingly powerful -- equivalent to modern computers.  There's a reason why Alan Turing is referred to as the "Father of Computer Science" and his paper on these machines is why.  Turing machines are one of the most important formal models in the study of computer science.
 
 
 # Responsibilities (What you need to know):
