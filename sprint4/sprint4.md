@@ -33,7 +33,7 @@ Complete the problem set as a team.  Scrumage grades will be assessed separ
 I may add to these as we go through the sprint.  Use the [Expert Request](https://rollins.co1.qualtrics.com/jfe/form/SV_0jNfbBpN1clDJfn?course=mat310s20&sprint=4) for more resources. 
    * Textbook:
        * FoC - Ch 4
-       * IToC - XXXX
+       * IToC - Ch 3.1, Intro to 3.3 (through Church-Turing thesis)
    * [Video](https://www.youtube.com/watch?v=-ZS_zFg4w5k) (YouTube, 9min)explaining Turing's original paper on Turing Machines and why it was so revolutionary
    * [Video](https://www.youtube.com/watch?v=gJQTFhkhwPA) (YouTube, 4min) of Turing Machine automaton.
    * [Vide0](https://www.youtube.com/watch?v=wGLQiHXHWNk) (YouTube, 6 min) - The Halting Problem (undeciable problems)
