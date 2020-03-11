@@ -6,22 +6,24 @@
 * Quiz date/time:  Wed. Apr. 1 at the beginning of class
 * Requirements due: Wed. Apr. 1 at the beginning of class.
 
-# Rationale: 
+# Rationale:
+When we studied DFAs and NFAs, we saw that the lack of "memory" prevented us from being able to work with certain languages.  Then we took a step farther and saw that CFGs could handle still more languages.  We've now come to Turing Machines.  Turing Machines introduce a bi-directional tape which serves as both input and output.  It's a really simple little machine, but as we'll see, it's amazingly powerful -- equivalent to modern computers.  There's a reason why Alan Turing is referred to as the "Father of Computer Science" and his paper on these machines is why.
 
 
 # Responsibilities (What you need to know):
-1. 
-   * 
-   * 
-   *  
+1. Understand formal definition.
+2. Given a formal definition of a TM, be able to draw the state machine
+3. Be able to trace a TMs states and tape for a particular input tape
+4. Understand duality of TMs: as a decider and as a computer (of functions)
+5. Understand the implications of the Church-Turing thesis
+6. Be able to state intuitively how to construct a TM to solve a specific problem
+7. Use JFLAP to construct, test, and modify TMs
 
 # Requirements (What you need to do):
-1.
-   *
-   *
+Complete the problem set as a team.  Scrumage grades will be assessed separ
 
 ## Individual Requirements:
-   * 
+   * Participate in your team and understand the responsibilities above
 
 ## Team Requirements:
    * Track deliverables via a team Trello board (share with valeriesummet)
