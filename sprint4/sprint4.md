@@ -37,6 +37,7 @@ I may add to these as we go through the sprint.  Use the [Expert Request](https:
    * [Video](https://www.youtube.com/watch?v=-ZS_zFg4w5k) (YouTube, 9min)explaining Turing's original paper on Turing Machines and why it was so revolutionary
    * [Video](https://www.youtube.com/watch?v=gJQTFhkhwPA) (YouTube, 4min) of Turing Machine automaton.
    * [Vide0](https://www.youtube.com/watch?v=wGLQiHXHWNk) (YouTube, 6 min) - The Halting Problem (undeciable problems)
+   * Video on Canvas: formal definition of TMs
    * [Download JFLAP7.1.jar](http://www.jflap.org/jflaptmp/july27-18/JFLAP7.1.jar) - Save this `.jar` file somewhere which is easy to access.  If you already have Java installed (as most of you do...) double-clicking the `.jar` file should start JFLAP.
    * [JFLAP tutorial](http://www.jflap.org/tutorial/) (specifically the Turing Machine section)
    
