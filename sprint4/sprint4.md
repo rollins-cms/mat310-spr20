@@ -41,6 +41,7 @@ I may add to these as we go through the sprint.  Use the [Expert Request](https:
    * [Video](https://www.youtube.com/watch?v=wGLQiHXHWNk) (YouTube, 6 min) - The Halting Problem (undeciable problems)
    * [Text-based explanation of the Halting Problem](https://www.khanacademy.org/computing/ap-computer-science-principles/algorithms-101/solving-hard-problems/a/undecidable-problems) 
    * [JFLAP tutorial](http://www.jflap.org/tutorial/) (specifically the Turing Machine section)
+   * [Practice quiz](./practice_quiz.pdf) and [Key](./practice_quiz_ans.pdf)
    
    
 # Retrospective:
