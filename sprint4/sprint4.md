@@ -39,6 +39,7 @@ I may add to these as we go through the sprint.  Use the [Expert Request](https:
    * Video on Canvas: Introduction to JFLAP (12 min); formal definition of TMs (8 min)
    * [Download JFLAP7.1.jar](http://www.jflap.org/jflaptmp/july27-18/JFLAP7.1.jar) - Save this `.jar` file somewhere which is easy to access.  If you already have Java installed (as most of you do...) double-clicking the `.jar` file should start JFLAP.
    * [Video](https://www.youtube.com/watch?v=wGLQiHXHWNk) (YouTube, 6 min) - The Halting Problem (undeciable problems)
+   * [Text-based explanation of the Halting Problem](https://www.khanacademy.org/computing/ap-computer-science-principles/algorithms-101/solving-hard-problems/a/undecidable-problems) 
    * [JFLAP tutorial](http://www.jflap.org/tutorial/) (specifically the Turing Machine section)
    
    
