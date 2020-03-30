@@ -41,7 +41,8 @@ position left:
 
     Using JFLAP, construct (and test!) the described TM.  Save your machine as `exercise4.jff`.
 
-5. ~~Using JFLAP, construct (and test!) a machine that reads in an input string over the alphabet {a,b} and halts with the cell the read/write head points to containing 1 if the input's length is odd and a □ (blank) otherwise. For example, if "aabba" is on the tape when the machine starts, the read/write head should point to a cell containing 1 when the machine halts. I don't care what else is on the tape when the machine halts.  Save your machine as `exercise5.jff`.~~
+~~5. Using JFLAP, construct (and test!) a machine that reads in an input string over the alphabet {a,b} and halts with the cell the read/write head points to containing 1 if the input's length is odd and a □ (blank) otherwise. For example, if "aabba" is on the tape when the machine starts, the read/write head should point to a cell containing 1 when the machine halts. I don't care what else is on the tape when the machine halts.  Save your machine as `exercise5.jff`.~~
+
 5. Using JFLAP, construct (and test!) a machine that reads in an input string over the alphabet {a,b} and halts in an accept state if the input's length is odd and rejects otherwise. For example, if "aabba" is on the tape when the machine starts, the machine should accept, but "aabb" would reject. I don't care what else is on the tape when the machine halts.  Save your machine as `exercise5.jff`.
 
 6. One fun thing you can do with a Turing Machine is to send it into an infinte loop. The following machine halts if its input begins with a, and goes into an infinite loop otherwise. I mean, it's one way of showing that you don't like a string. You can think of it as throwing a tantrum.
