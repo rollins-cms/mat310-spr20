@@ -2,9 +2,9 @@
 
 # Roadmap:
 * Teams
-* Sprint Duration: 
-* Quiz date/time: Monday, 4/27- Tuesday, 4/28
-* Requirements due: Monday, 4/27
+* Sprint Duration: Mo. 4/6 - Wed. 4/22
+* Quiz date/time: Wed, 4/22- Th, 4/23
+* Requirements due: Wed, 4/23
 
 # Rationale: 
 We've spent a lot of time on theoretical computing machines.  Now we're going to circle back around to the start of our exploration.  How are these computing machines actually built?  What sorts of hardware allow us to make the transition from the mathematical world to the physical computing world?  We'll explore logic gates and see how to put together some very basic building blocks to build sophisticated computing machines. 
@@ -22,9 +22,6 @@ We've spent a lot of time on theoretical computing machines.  Now we're going to
 6. Understand timing diagrams
 
 # Requirements (What you need to do):
-1.
-   *
-   *
 
 ## Individual Requirements:
    * Contribute to your team and tracking team deliverables
@@ -32,11 +29,11 @@ We've spent a lot of time on theoretical computing machines.  Now we're going to
 
 ## Team Requirements:
    * Maintain a Trello board for deliverables
-   * Complete the team problem set
+   * Complete the team [problem set](./sprint5_problem_set.pdf)
    
 # Resources:  
 I may add to these as we go through the sprint.  Use the [Expert Request](https://rollins.co1.qualtrics.com/jfe/form/SV_0jNfbBpN1clDJfn?course=mat310s20&sprint=5) for more resources. 
-   * [Computation and Logic Gates Video](https://rollins.kanopy.com/video/computation-and-logic-gates) -- Professional video covering Logic.  The first 10 minutes are history which are interesting and fun, but not a learning goal for this sprint.  So just sit back and enjoy that part.  The next 20 minutes cover all the way from logic gates to flip-flops.  The only drawback is that he doesn't use the standard gate notation.
+   * [Computation and Logic Gates Video](https://rollins.kanopy.com/video/computation-and-logic-gates) -- Professional video covering Logic.  The first 10 minutes are history which are interesting and fun, but not a learning goal for this sprint.  So just sit back and enjoy that part.  The next 20 minutes cover all the way from logic gates to flip-flops.  The only drawback is that he doesn't use the standard gate notation (but those can be found in your textbook).
    * FoC - 1.3  (There is not a section on logic gates in IToC)
    * [Worked Example of Circuit Simplification](./worked_example-simplification.pdf)
    * [Easy Circuit Simulation Website](https://sciencedemos.org.uk/logic_gates.php)
