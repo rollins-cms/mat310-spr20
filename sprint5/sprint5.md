@@ -38,6 +38,7 @@ I may add to these as we go through the sprint.  Use the [Expert Request](https:
    * [Worked Example of Circuit Simplification](./worked_example-simplification.pdf)
    * [Easy Circuit Simulation Website](https://sciencedemos.org.uk/logic_gates.php)
    * Videos on Canvas: Universal NAND gates (11 min), Timing Diagrams (6 min)
+   * [Practice quiz](./practice_quiz.pdf) and [answer key](./practice_quiz_ans.pdf)
    
 # Retrospective:
   * Complete this [sprint retrospective survey](https://rollins.co1.qualtrics.com/jfe/form/SV_3rAIzhpHFYbIixf?course=mat310s20&sprint=5).  Each team member should complete a survey.
